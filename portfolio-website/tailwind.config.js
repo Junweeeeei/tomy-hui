@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC", 
+        "gray-20": "#D0D0D0",
+        "gray-50": "#C4C4C4",
+        "gray-100": "#B3B3B3", 
         "gray-500": "#5E0000",
         "primary-100": "#FFFFFF",
         "primary-300": "#FFA6A3",
