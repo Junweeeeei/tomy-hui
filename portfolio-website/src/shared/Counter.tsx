@@ -25,7 +25,7 @@ const Counter = ({ targetValue, targetDuration }: Props) => {
 
           if (progress < 0.2) {
             // For the first 20%, ease in very slowly
-            easedProgress = Math.pow(progress, 10); // Quardratic easing for a very slow start
+            easedProgress = Math.pow(1 -progress, 1); // Quardratic easing for a very slow start
           } else if (progress < 0.8) {
             // For the middle 60%, linear transition
             easedProgress = progress; // Linear for a consistent increase
@@ -39,7 +39,7 @@ const Counter = ({ targetValue, targetDuration }: Props) => {
             (targetDuration / targetValue) * easedProgress,
             minIntervalTime
           );
-
+          
           setIntervalTime(newIntervalTime); // Update interval time
           return newCount; // Return the incremented count
         } else {
