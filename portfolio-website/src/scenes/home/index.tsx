@@ -13,10 +13,10 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:700px)");
 
   return (
-    <section id="home" className=" gap-16 bg-home-background py-10 md:h-full md:pb-0  items-center justify-center ">
+    <section id="home" className="gap-16 py-28 md:h-3/7 items-center justify-center bg-home-background bg-cover">
       {/* IMAGE AND MAIN HEADER */}
       <motion.div
-        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
@@ -33,15 +33,9 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="mt-48 text-5xl font-extrabold text-white ">
+            <p className="mt-48 w-2/3 text-5xl font-extrabold text-white ">
               Disciplined and Trustworthy Electrical Engineering Service
             </p>
-            <AnchorLink
-              className="text-xl font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
-            >
-            </AnchorLink>
           </motion.div>
 
           {/* ACTIONS */}
@@ -56,32 +50,16 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <ActionButton setSelectedPage={setSelectedPage}>
+            <AnchorLink  
+              className="rounded-r-xl text-bold bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white"
+              onClick={() => setSelectedPage(SelectedPage.About)}
+              href={`#${SelectedPage.About}`}
+            >
               Learn More
-            </ActionButton>
+            </AnchorLink>
           </motion.div>
         </div>
-        {/* IMAGE */}
-        {/* <div
-          className="flex basis-3/5 justify-center md:z-10
-              md:ml-40 md:mt-16 md:justify-items-end"
-        >
-          <img alt="home-pageBackground" src={HomePageBackground} />
-        </div> */}
       </motion.div>
-
-      {/* SPONSORS */}
-      {/* {isAboveMediumScreens && (
-        <div className="h-[150px] w-full bg-primary-100 py-10">
-          <div className="mx-auto w-5/6">
-            <div className="flex w-3/5 items-center justify-between gap-8">
-              <img alt="redbull-sponsor" src={SponsorRedBull} />
-              <img alt="forbes-sponsor" src={SponsorForbes} />
-              <img alt="fortune-sponsor" src={SponsorFortune} />
-            </div>
-          </div>
-        </div>
-      )} */}
     </section>
   );
 };
