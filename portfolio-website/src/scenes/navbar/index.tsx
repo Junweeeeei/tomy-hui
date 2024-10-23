@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo_resized.png";
 import Link from "./Link";
+// import { Link } from 'react-router-dom';
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+
 
 type Props = {
   isTopOfPage: boolean;
@@ -48,10 +50,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                   <Link
-                    page="Contact Us"
+                    page="Contact"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
+                  {/* <Link to="/home">Home</Link>
+                  <Link to="/services">Services</Link>
+                  <Link to="/about">About</Link>
+                  <Link to="/contact">Contact</Link> */}
                 </div>
               </div>
             ) : (
@@ -94,7 +100,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Contact Us"
+              page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
