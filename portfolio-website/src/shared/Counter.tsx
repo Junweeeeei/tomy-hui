@@ -39,7 +39,6 @@ const Counter = ({ targetValue, targetDuration }: Props) => {
             (targetDuration / targetValue) * easedProgress,
             minIntervalTime
           );
-          
           setIntervalTime(newIntervalTime); // Update interval time
           return newCount; // Return the incremented count
         } else {
@@ -53,14 +52,14 @@ const Counter = ({ targetValue, targetDuration }: Props) => {
   }, [count, targetValue, intervalTime]); // Add intervalTime to dependencies
 
   return (
-    <div className="items-center flex w-2/5">
+    <div className="items-center flex w-3/5">
       {count > 10 ? (
         <>
-          <p className="w-full text-center mx-auto text-4xl">{count}</p>
-          <p className="w-full text-center mx-auto text-4xl">+</p>
+          <p className="flex-grow text-center mx-auto text-8xl font-extrabold">{count}</p>
+          <p className="flex-grow text-center mx-auto text-8xl font-extrabold">+</p>
         </>
       ) : (
-        <p className="w-full text-center mx-auto text-4xl">{count}</p>
+        <p className="w-full text-center mx-auto text-8xl font-extrabold">{count}</p>
       )}
     </div>
   );
