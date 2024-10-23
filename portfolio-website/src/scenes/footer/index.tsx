@@ -17,7 +17,7 @@ const Footer = () => {
           <p>© Tomy Hui Electrical Engineering Pte. Ltd All Rights Reserved.</p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">
-          <h4 className="font-bold">Contact Us</h4>
+          <h4 className="font-bold">Contact</h4>
           <p className="my-5">Tel: 9XXX XXXX.</p>
           <p className="my-5">Fax: 9XXX XXXX.</p>
           <p className="my-5">Adminstrative Matters: thelectrical@gmail.com</p>
