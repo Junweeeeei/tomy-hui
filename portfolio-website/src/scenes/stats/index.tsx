@@ -2,7 +2,7 @@ import Counter from "@/shared/Counter"
 
 const Stats = () => {
   return (
-    <footer className="bg-gray-20 py-16">
+    <section className="bg-gray-20 py-16">
       <div className="justify-content mx-auto w-2/3 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
           <p className="my-5">
@@ -29,7 +29,7 @@ const Stats = () => {
           </div>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">
-          <div className="basis-1/8 md:mt-0 font-bold text-blue-900">
+          <div className="basis-1/8 md:mt-0 font-bold text-blue-900 ">
             Projects Completed
           </div>
           {/* Countup timer */}
@@ -38,7 +38,7 @@ const Stats = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
