@@ -3,11 +3,6 @@ import HText from "@/shared/HText";
 import { ServiceType, SelectedPage } from "@/shared/types";
 import ServicesPageGraphics from "@/assets/HomePageBackground.png";
 import Footer from "@/scenes/footer"
-import {
-  HomeModernIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Service from "./Services";
 
@@ -28,24 +23,27 @@ const images: ImageProps[] = [
 
 const services: Array<ServiceType> = [
   {
-    icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "Service 1",
+    title: "Piping",
     description:
-      "Description 1",
+      "Piping",
     img: ServicesPageGraphics,
   },
   {
-    icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "Service 2",
+    title: "Electrical Cabling",
     description:
-      "Description 2",
+      "Electrical Cabling",
     img: ServicesPageGraphics,
   },
   {
-    icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Service 3",
+    title: "Roofing",
     description:
-      "Description 3",
+      "Roofing",
+    img: ServicesPageGraphics,
+  },
+  {
+    title: "No Roofing",
+    description:
+      "No Roofing",
     img: ServicesPageGraphics,
   },
 ];
@@ -118,7 +116,7 @@ const Services = ({ setSelectedPage }: Props) => {
           </motion.div>
           {/* SERVICES */}
           <motion.div
-            className="mt-5 items-center justify-between gap-8 md:flex"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center gap-8 pt-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -127,7 +125,6 @@ const Services = ({ setSelectedPage }: Props) => {
             {services.map((service: ServiceType) => (
               <Service
                 key={service.title}
-                icon={service.icon}
                 title={service.title}
                 description={service.description}
                 img={service.img}
@@ -135,25 +132,6 @@ const Services = ({ setSelectedPage }: Props) => {
               />
             ))}
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            {images.map((image) => (
-              <a 
-                href="#" 
-                key={image.id} 
-                className="relative group overflow-hidden transition-shadow duration-300 hover:shadow-lg"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                {/* Solid Transparent Red Section */}
-                <div className="absolute bottom-0 left-0 right-0 bg-blue-600/40 h-1/3 flex items-end p-2">
-                  <p className="text-white text-sm">{image.description}</p>
-                </div>
-              </a>
-            ))}
-          </div>
           {/* GRAPHICS AND DESCRIPTION */}
           <div className="mt-16 items-center gap-20 md:flex">
             {/* DESCRIPTION */}

@@ -8,38 +8,38 @@ const childVariant = {
 };
 
 type Props = {
-  icon: JSX.Element;
   title: string;
   description: string;
   img: string;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Services = ({ icon, title, description, img, setSelectedPage }: Props) => {
+const Services = ({ title, description, img, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={childVariant}
-      className="mt-1 rounded-md border-2 border-gray-100 px-0 py-8 text-center"
+      className="elative group overflow-hidden transition-shadow duration-300 hover:shadow-2xl"
     >
-      <div className="mb-4 flex justify-center">
-        <div className="border-primary-100 bg-primary-100">
+      <a 
+        href="#" 
+        key={title} 
+        className="relative"
+      >
+        <div className="w-full h-full overflow-hidden relative" style={{ paddingBottom: '100%' }}> {/* Aspect ratio for square */}
           <img
-            className="mx-auto"
-            alt="services-page-graphic"
-            src={img}
+              src={img}
+              alt={title}
+              className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110" 
           />
         </div>
-      </div>
-
-      <h4 className="font-bold">{title}</h4>
-      <p className="my-3">{description}</p>
-      <AnchorLink
-        className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-        onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-        href={`#${SelectedPage.ContactUs}`}
-      >
-        <p>Learn More</p>
-      </AnchorLink>
+        {/* Solid Transparent Blue Section */}
+        <div className="absolute bottom-0 left-0 right-0 bg-blue-600/40 h-1/3 flex items-end p-6">
+            <div className="text-white text-2xl font-bold text-center flex items-center justify-center w-full h-full"> {/* Centering text */}
+              {description}
+            </div>
+            {/* <p className="text-white text-sm">{description}</p> */}
+        </div>
+      </a>
     </motion.div>
   );
 };

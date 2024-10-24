@@ -6,7 +6,6 @@ export enum SelectedPage {
 }
 
 export interface ServiceType {
-  icon: JSX.Element;
   title: string;
   description: string;
   img: string;
