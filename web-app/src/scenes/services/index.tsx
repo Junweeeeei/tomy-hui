@@ -6,21 +6,6 @@ import Footer from "@/scenes/footer"
 import { motion } from "framer-motion";
 import Service from "./Services";
 
-type ImageProps = {
-  id: number;
-  src: string;
-  alt: string;
-  description: string;
-};
-
-
-const images: ImageProps[] = [
-  { id: 1, src: ServicesPageGraphics, alt: "Image 1", description: "Piping" },
-  { id: 2, src: ServicesPageGraphics, alt: "Image 2", description: "Electrical Cabling" },
-  { id: 3, src: ServicesPageGraphics, alt: "Image 3", description: "Roofing" },
-  { id: 4, src: ServicesPageGraphics, alt: "Image 4", description: "No Roofing" },
-];
-
 const services: Array<ServiceType> = [
   {
     title: "Piping",
@@ -67,7 +52,7 @@ const Services = ({ setSelectedPage }: Props) => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
         <motion.div
           className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
-          onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+          onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
         >
           <div className="z-10 md:basis-full">
             {/* HEADINGS */}
