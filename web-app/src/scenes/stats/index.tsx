@@ -3,7 +3,7 @@ import Counter from "@/shared/Counter"
 const Stats = () => {
   return (
     <section className="bg-gray-20 py-16">
-      <div className="justify-content mx-auto w-2/3 gap-16 md:flex">
+      <div className="justify-content mx-auto w-1/2 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
           <p className="my-5">
             About us

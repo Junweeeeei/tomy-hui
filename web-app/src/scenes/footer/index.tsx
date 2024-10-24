@@ -1,9 +1,11 @@
 import Logo from "@/assets/Logo_resized.png";
+import EmailLink from "@/shared/EmailLink";
+import PhoneNumber from "@/shared/PhoneNumber";
 
 const Footer = () => {
   return (
     <footer className="bg-blue-900 py-16 text-white">
-      <div className="justify-content mx-auto w-2/3 gap-16 md:flex">
+      <div className="justify-content mx-auto w-1/2 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
           <img alt="logo" src={Logo} />
           <p className="my-5">
@@ -18,10 +20,21 @@ const Footer = () => {
         <div className="mt-16 basis-1/4 md:mt-0 ">
           <div>
             <h4 className="font-bold text-2xl">Contact</h4>
-            <p className="my-5">Tel: 9XXX XXXX.</p>
-            <p className="my-5">Fax: 9XXX XXXX.</p>
-            <p className="my-5">Adminstrative Matters: thelectrical@gmail.com</p>
-            <p className="my-5">Project Enquiries: thelectrical@gmail.com</p>
+            <div className="my-5">
+              <span className="my-5">
+                Tel:  
+                <PhoneNumber color="text-white" phoneNumber="6268 9727"> 6268 9727</PhoneNumber>
+              </span>
+            </div>
+            <p className="my-5 text-white">Fax: 6268 9727</p>
+            <div className="my-5">
+              <span className="my-5">Administrative Matters: </span>
+              <EmailLink color='text-white'> tomyhui_finance@yahoo.com.sg </EmailLink>
+            </div>
+            <div className="my-5">
+              <span className="my-5">Project Inquiries </span>
+              <EmailLink color='text-white'> tomyhui_finance@yahoo.com.sg </EmailLink>
+            </div>
           </div>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0 ">

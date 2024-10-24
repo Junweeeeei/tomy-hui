@@ -3,6 +3,7 @@ import Footer from '@/scenes/footer'
 import { motion } from "framer-motion";
 import { ServiceType, SelectedPage } from "@/shared/types";
 import GoogleMapComponent from '@/shared/GoogleMapComponent';
+import EmailLink from '@/shared/EmailLink';
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -21,7 +22,7 @@ const Contact = ({ setSelectedPage }: Props) => {
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
-          className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
+          className="mx-auto w-1/2 md:h-full items-center justify-center md:flex"
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
           <div className="z-10 md:basis-full">
@@ -37,10 +38,10 @@ const Contact = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-2/3 text-5xl font-extrabold text-white ">
+              <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
                 Contact
               </p>
-              <p className="mt-5 w-2/3 text-xl text-white ">
+              <p className="mt-5 w-1/2 text-xl text-white ">
                 Contact Our Team of Experts for Engineering Solutions.
               </p>
             </motion.div>
@@ -48,7 +49,7 @@ const Contact = ({ setSelectedPage }: Props) => {
         </motion.div>
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center bg-gray-20">
-        <motion.div className="mx-auto w-2/3"
+        <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
           {/* HEADER */}
@@ -95,15 +96,11 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </div>
                 <div>
                   <span className="text-lg font-bold">Administrative Matters: </span>
-                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline">
-                    tomyhui@gmail.com
-                  </a>
+                  <EmailLink> tomyhui_finance@yahoo.com.sg </EmailLink>
                 </div>
                 <div>
                   <span className="text-lg font-bold">Project Inquiries: </span>
-                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline">
-                    tomyhui@gmail.com
-                  </a>
+                  <EmailLink> tomyhui_finance@yahoo.com.sg </EmailLink>
                 </div>
               </div>
               <div>
@@ -123,7 +120,7 @@ const Contact = ({ setSelectedPage }: Props) => {
         </motion.div>
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center">
-        <motion.div className="mx-auto w-2/3"
+        <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
           {/* HEADER */}

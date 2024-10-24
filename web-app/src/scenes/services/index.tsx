@@ -46,12 +46,12 @@ type Props = {
 
 const Services = ({ setSelectedPage }: Props) => {
   return (
-    <section id="services" className="mx-auto min-h-full w-full">
-      <div className="relative bg-home-background bg-cover md:min-h-[400px] flex items-center justify-center"> {/* Background image container */}
+    <section id="services" className="md:h-full">
+      <div className="relative bg-home-background bg-cover md:min-h-300px min-h-[400px] md:min flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
-          className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
+          className="mx-auto w-1/2 md:w-1/2 lg:w-2/3 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
           onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
         >
           <div className="z-10 md:basis-full">
@@ -67,10 +67,10 @@ const Services = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-2/3 text-5xl font-extrabold text-white ">
+              <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
                 Services
               </p>
-              <p className="mt-5 w-2/3 text-xl text-white ">
+              <p className="mt-5 w-1/2 text-xl text-white ">
                 Over 25 years of industry expertise in delivering underground infrastructure solutions
               </p>
             </motion.div>
@@ -78,7 +78,7 @@ const Services = ({ setSelectedPage }: Props) => {
         </motion.div>
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center">
-        <motion.div className="mx-auto w-2/3"
+        <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
         >
           {/* HEADER */}

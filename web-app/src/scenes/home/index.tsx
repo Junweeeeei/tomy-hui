@@ -16,13 +16,13 @@ const Home = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="md:h-full">
-      <div className="relative bg-home-background bg-cover md:min-h-[800px] flex items-center justify-center"> {/* Background image container */}
+      <div className="relative bg-home-background bg-cover md:min-h-800px min-h-[800px] md:mifn flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
 
         {/* IMAGE AND MAIN HEADER */}
         <motion.div
-          className="mx-auto w-full md:w-2/3 lg:w-2/3 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
+          className="mx-auto w-1/2 md:w-1/2 lg:w-1/2 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
           {/* MAIN HEADER */}

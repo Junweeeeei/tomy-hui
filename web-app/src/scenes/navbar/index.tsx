@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo_resized.png";
 import Link from "./Link";
@@ -14,50 +14,47 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 700px)");
-  const navbarBackground = isTopOfPage ? "py-6" : "py-1";
+  const navbarBackground = isTopOfPage ? "h-[8%]" : "h-[5%]";
 
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} bg-primary-100 drop-shadow transition-all duration-300 fixed top-0 z-30 w-full`}
+        className={`${navbarBackground} ${flexBetween} bg-primary-100 drop-shadow transition-all duration-300 fixed z-30 w-full`}
       >
-        <div className={`${flexBetween} mx-auto w-2/3`}>
-          <div className={`${flexBetween} w-full gap-16`}>
+        <div className={` ${flexBetween} mx-auto w-1/2 h-full`}>
+          <div className={`${flexBetween} w-full gap-16 h-full`}>
             {/* LEFT SIDE */}
-            <img alt="logo" src={Logo} />
-
+            <img alt="logo" src={Logo} className="transition-transform duration-300 h-full" />
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (
-              <div className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} gap-8 text-2xl`}>
-                  <Link
-                    page="Home"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Link
-                    page="Services"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Link
-                    page="About"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Link
-                    page="Contact"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  {/* <Link to="/home">Home</Link>
-                  <Link to="/services">Services</Link>
-                  <Link to="/about">About</Link>
-                  <Link to="/contact">Contact</Link> */}
+              <div className="ml-auto">
+                <div className={`${flexBetween} w-full`}>
+                  <div className={`${flexBetween} gap-8 text-2xl`}>
+                    <Link
+                      page="Home"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                    <Link
+                      page="Services"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                    <Link
+                      page="About"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                    <Link
+                      page="Contact"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                  </div>
                 </div>
               </div>
             ) : (

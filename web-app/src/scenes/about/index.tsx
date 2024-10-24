@@ -32,7 +32,7 @@ const About = ({ setSelectedPage }: Props) => {
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
-          className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
+          className="mx-auto w-1/2 md:h-full items-center justify-center md:flex"
           onViewportEnter={() => setSelectedPage(SelectedPage.About)}
         >
           <div className="z-10 md:basis-full">
@@ -48,10 +48,10 @@ const About = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-2/3 text-5xl font-extrabold text-white ">
+              <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
                 About
               </p>
-              <p className="mt-5 w-2/3 text-xl text-white ">
+              <p className="mt-5 w-1/2 text-xl text-white ">
                 Over 25 years of industry expertise in delivering underground infrastructure solutions
               </p>
             </motion.div>
@@ -59,7 +59,7 @@ const About = ({ setSelectedPage }: Props) => {
         </motion.div>
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center bg-gray-20">
-        <motion.div className="mx-auto w-2/3"
+        <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.About)}
         >
           {/* HEADER */}
@@ -85,7 +85,7 @@ const About = ({ setSelectedPage }: Props) => {
         </motion.div>
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center">
-        <motion.div className="mx-auto w-2/3"
+        <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.About)}
         >
           {/* HEADER */}

@@ -19,7 +19,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   return (
     <RouterLink
       className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
-        transition duration-500 hover:text-primary-300
+        transition duration-500 hover:text-primary-300 font-semibold text-blue-700 text-lg
       `}
       // href={`#${lowerCasePage}`}
       to={`/${lowerCasePage}`} // Navigates to a new page based on the page name
