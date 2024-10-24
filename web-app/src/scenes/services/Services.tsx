@@ -18,7 +18,7 @@ const Services = ({ title, description, img, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={childVariant}
-      className="elative group overflow-hidden transition-shadow duration-300 hover:shadow-2xl"
+      className="elative group overflow-hidden transition-shadow duration-300 hover:shadow-2xl rounded-md"
     >
       <a 
         href="#" 
