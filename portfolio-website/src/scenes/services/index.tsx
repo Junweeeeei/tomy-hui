@@ -1,0 +1,218 @@
+import ActionButton from "@/shared/ActionButton";
+import HText from "@/shared/HText";
+import { ServiceType, SelectedPage } from "@/shared/types";
+import ServicesPageGraphics from "@/assets/HomePageBackground.png";
+import Footer from "@/scenes/footer"
+import {
+  HomeModernIcon,
+  UserGroupIcon,
+  AcademicCapIcon,
+} from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
+import Service from "./Services";
+
+type ImageProps = {
+  id: number;
+  src: string;
+  alt: string;
+  description: string;
+};
+
+
+const images: ImageProps[] = [
+  { id: 1, src: ServicesPageGraphics, alt: "Image 1", description: "Piping" },
+  { id: 2, src: ServicesPageGraphics, alt: "Image 2", description: "Electrical Cabling" },
+  { id: 3, src: ServicesPageGraphics, alt: "Image 3", description: "Roofing" },
+  { id: 4, src: ServicesPageGraphics, alt: "Image 4", description: "No Roofing" },
+];
+
+const services: Array<ServiceType> = [
+  {
+    icon: <HomeModernIcon className="h-6 w-6" />,
+    title: "Service 1",
+    description:
+      "Description 1",
+    img: ServicesPageGraphics,
+  },
+  {
+    icon: <UserGroupIcon className="h-6 w-6" />,
+    title: "Service 2",
+    description:
+      "Description 2",
+    img: ServicesPageGraphics,
+  },
+  {
+    icon: <AcademicCapIcon className="h-6 w-6" />,
+    title: "Service 3",
+    description:
+      "Description 3",
+    img: ServicesPageGraphics,
+  },
+];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const Services = ({ setSelectedPage }: Props) => {
+  return (
+    <section id="services" className="mx-auto min-h-full w-full">
+      <div className="relative bg-home-background bg-cover md:h-1/4"> {/* Background image container */}
+        {/* Gradient Overlay (applies only to this container) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
+        <motion.div
+          className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
+          onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        >
+          <div className="z-10 md:basis-full">
+            {/* HEADINGS */}
+            <motion.div
+              className="md:-mt-20"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <p className="mt-40 w-2/3 text-5xl font-extrabold text-white ">
+                Services
+              </p>
+              <p className="mt-5 w-2/3 text-xl text-white ">
+                Over 25 years of industry expertise in delivering underground infrastructure solutions
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+      <div className="py-10 md:h-5/7 items-center justify-center">
+        <motion.div className="mx-auto w-2/3"
+          onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
+        >
+          {/* HEADER */}
+          <motion.div
+            className="md:my-5 md:w-3/5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <p>Our Core Services.</p>
+            <p className="my-5 text-3xl">
+              Specialised Engineering solution from planning , 
+              designing to building your infrastructure
+            </p>
+          </motion.div>
+          {/* SERVICES */}
+          <motion.div
+            className="mt-5 items-center justify-between gap-8 md:flex"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={container}
+          >
+            {services.map((service: ServiceType) => (
+              <Service
+                key={service.title}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                img={service.img}
+                setSelectedPage={setSelectedPage}
+              />
+            ))}
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+            {images.map((image) => (
+              <a 
+                href="#" 
+                key={image.id} 
+                className="relative group overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover transition-transform duration-300 transform group-hover:scale-105"
+                />
+                {/* Solid Transparent Red Section */}
+                <div className="absolute bottom-0 left-0 right-0 bg-blue-600/40 h-1/3 flex items-end p-2">
+                  <p className="text-white text-sm">{image.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+          {/* GRAPHICS AND DESCRIPTION */}
+          <div className="mt-16 items-center gap-20 md:flex">
+            {/* DESCRIPTION */}
+            <div>
+              {/* TITLE */}
+              <div className="relative">
+                <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                      hidden: { opacity: 0, x: 50 },
+                      visible: { opacity: 1, x: 0 },
+                    }}
+                  >
+                    <HText>
+                      HUNDRED OF SATISFIED{" "}
+                      <span className="text-primary-300">CLIENTS</span>
+                    </HText>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* DESCRIPTION */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                <p className="my-5">
+                  Tomy Hui Electrical Engineering is proud to annouce that we hold certificates of ....
+                </p>
+                <p className="mb-5">
+                  We wil do our best to serve!
+                </p>
+              </motion.div>
+
+              {/* BUTTON */}
+              <div className="relative mt-16">
+                <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                  <ActionButton setSelectedPage={setSelectedPage}>
+                    Send Us Enquiry
+                  </ActionButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+      <Footer/>
+    </section>
+  );
+};
+
+export default Services;
