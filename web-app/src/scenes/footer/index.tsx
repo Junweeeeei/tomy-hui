@@ -14,15 +14,27 @@ const Footer = () => {
           Whether you’re planning a new development or upgrading existing systems, 
           our team is equipped to provide solutions which tailored to your needs.
           </p>
-          <p>© Tomy Hui Electrical Engineering Pte. Ltd All Rights Reserved.</p>
         </div>
-        <div className="mt-16 basis-1/4 md:mt-0">
-          <h4 className="font-bold">Contact</h4>
-          <p className="my-5">Tel: 9XXX XXXX.</p>
-          <p className="my-5">Fax: 9XXX XXXX.</p>
-          <p className="my-5">Adminstrative Matters: thelectrical@gmail.com</p>
-          <p className="my-5">Project Enquiries: thelectrical@gmail.com</p>
+        <div className="mt-16 basis-1/4 md:mt-0 ">
+          <div>
+            <h4 className="font-bold text-2xl">Contact</h4>
+            <p className="my-5">Tel: 9XXX XXXX.</p>
+            <p className="my-5">Fax: 9XXX XXXX.</p>
+            <p className="my-5">Adminstrative Matters: thelectrical@gmail.com</p>
+            <p className="my-5">Project Enquiries: thelectrical@gmail.com</p>
+          </div>
         </div>
+        <div className="mt-16 basis-1/4 md:mt-0 ">
+          <div>
+            <h4 className="font-bold text-2xl">Company</h4>
+            <a href="/about" className="my-5 block">About</a>
+            <a href="/contact" className="my-5 block">Contact</a>
+            <a href="/about" className="my-5 block">Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div className="mt-16 mx-auto w-full md:flex justify-center">
+        <p className="text-center">© Tomy Hui Electrical Engineering Pte. Ltd All Rights Reserved.</p>
       </div>
     </footer>
   );
