@@ -6,7 +6,7 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
-
+import EmailLink from "@/shared/EmailLink";
 
 type Props = {
   isTopOfPage: boolean;
@@ -18,7 +18,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 700px)");
-  const navbarBackground = isTopOfPage ? "h-[8%]" : "h-[5%]";
+  const navbarBackground = isTopOfPage ? "h-16" : "h-20";
 
   return (
     <nav>
@@ -54,6 +54,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
+                    {/* Interactive Button For Email */}
+                    <EmailLink className="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-blue-800 px-8 py-2 text-neutral-50">
+                      <span className="relative z-10">
+                        Enquire Now
+                      </span>
+                      <span className="absolute inset-0 overflow-hidden rounded-md">
+                        <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-red-700 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
+                        </span>
+                      </span>
+                    </EmailLink>
                   </div>
                 </div>
               </div>
@@ -66,12 +76,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
               </button>
             )}
           </div>
-        </div>
+        </div>  
       </div>
 
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondary-400 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[250px] bg-secondary-400 drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
@@ -80,7 +90,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div className="ml-[33%] flex flex-col gap-10 text-2xl overflow-y-auto h-[calc(100%-48px)]">
+            {/* Adjust height to account for the close button's height */}
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -101,6 +112,15 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+            <EmailLink className="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-blue-800 px-8 py-2 text-neutral-50">
+              <span className="relative z-10">
+                Enquire Now
+              </span>
+              <span className="absolute inset-0 overflow-hidden rounded-md">
+                <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-red-700 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
+                </span>
+              </span>
+            </EmailLink>
           </div>
         </div>
       )}

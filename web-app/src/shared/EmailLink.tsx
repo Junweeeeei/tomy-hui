@@ -2,10 +2,10 @@ import React from "react";
 
 type Props = {
   children: React.ReactNode; // display string for link
-  color?: string; // Optional color prop
+  className?: string; // Optional className prop
 };
 
-const EmailLink = ({ children, color = "text-blue-500" }: Props) => {
+const EmailLink = ({ children, className="text-blue-500" }: Props) => {
   const recipient = "tomyhui_finance@yahoo.com.sg"; // Recipient's email
   const subject = encodeURIComponent(""); // Email subject
   const body = encodeURIComponent(""); // Email body
@@ -13,7 +13,7 @@ const EmailLink = ({ children, color = "text-blue-500" }: Props) => {
   const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
   return (
-    <a href={mailtoLink} className={color}>
+    <a href={mailtoLink} className={className}>
       {children}
     </a>
   );

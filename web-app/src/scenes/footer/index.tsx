@@ -29,11 +29,11 @@ const Footer = () => {
             <p className="my-5 text-white">Fax: 6268 9727</p>
             <div className="my-5">
               <span className="my-5">Administrative Matters: </span>
-              <EmailLink color='text-white'> tomyhui_finance@yahoo.com.sg </EmailLink>
+              <EmailLink className='text-white'> tomyhui_finance@yahoo.com.sg </EmailLink>
             </div>
             <div className="my-5">
               <span className="my-5">Project Inquiries </span>
-              <EmailLink color='text-white'> tomyhui_finance@yahoo.com.sg </EmailLink>
+              <EmailLink className='text-white'> tomyhui_finance@yahoo.com.sg </EmailLink>
             </div>
           </div>
         </div>
