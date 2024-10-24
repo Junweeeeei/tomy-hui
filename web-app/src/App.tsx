@@ -6,6 +6,7 @@ import About from "@/scenes/about"
 import Contact from "@/scenes/contact"
 import { SelectedPage } from "@/shared/types";
 import { BrowserRouter as Router, Route, Routes, Navigate  } from 'react-router-dom';
+import ScrollToTop from '@/shared/ScrollToTop';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -32,6 +33,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home setSelectedPage={setSelectedPage} />} />

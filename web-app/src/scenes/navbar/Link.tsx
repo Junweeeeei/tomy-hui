@@ -11,6 +11,11 @@ type Props = {
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
 
+  const handlePageClick = (page: SelectedPage) => {
+    window.scrollTo(0, 0); // Scroll to the top
+    setSelectedPage(page); // Call your existing function to set the selected page
+};
+
   return (
     <RouterLink
       className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
@@ -18,7 +23,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
       `}
       // href={`#${lowerCasePage}`}
       to={`/${lowerCasePage}`} // Navigates to a new page based on the page name
-      onClick={() => setSelectedPage(lowerCasePage)}
+      onClick={() => handlePageClick(lowerCasePage)}
     >
       {page}
     </RouterLink>
