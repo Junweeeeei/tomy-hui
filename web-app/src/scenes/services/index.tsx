@@ -47,9 +47,9 @@ type Props = {
 const Services = ({ setSelectedPage }: Props) => {
   return (
     <section id="services" className="mx-auto min-h-full w-full">
-      <div className="relative bg-home-background bg-cover md:h-1/4"> {/* Background image container */}
+      <div className="relative bg-home-background bg-cover md:min-h-[400px] flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
           className="mx-auto w-2/3 md:h-full items-center justify-center md:flex"
           onViewportEnter={() => setSelectedPage(SelectedPage.Services)}

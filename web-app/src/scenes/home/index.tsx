@@ -15,10 +15,10 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:700px)");
 
   return (
-    <section id="home" className="md:h-1/2 items-center justify-center relative">
+    <section id="home" className="md:h-full">
       <div className="relative bg-home-background bg-cover md:min-h-[800px] flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-black opacity-25"></div>
 
         {/* IMAGE AND MAIN HEADER */}
         <motion.div
