@@ -16,20 +16,20 @@ const Home = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="md:h-1/2 items-center justify-center relative">
-      <div className="relative bg-home-background bg-cover md:h-full"> {/* Background image container */}
+      <div className="relative bg-home-background bg-cover md:min-h-[800px] flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
 
         {/* IMAGE AND MAIN HEADER */}
         <motion.div
-          className="py-10 mx-auto w-full md:w-2/3 lg:w-2/3 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
+          className="mx-auto w-full md:w-2/3 lg:w-2/3 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
           {/* MAIN HEADER */}
           <div className="md:basis-full">
             {/* HEADINGS */}
             <motion.div
-              className="md:-mt-20"
+              className="md:mt-20"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -39,7 +39,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-48 w-full md:w-3/4 lg:w-2/3 text-5xl font-extrabold text-white">
+              <p className="w-full md:w-3/4 lg:w-2/3 text-5xl font-extrabold text-white">
                 Disciplined and Trustworthy Electrical Engineering Service
               </p>
             </motion.div>
