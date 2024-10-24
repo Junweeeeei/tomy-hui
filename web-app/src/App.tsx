@@ -5,7 +5,7 @@ import Services from "@/scenes/services"
 import About from "@/scenes/about"
 import Contact from "@/scenes/contact"
 import { SelectedPage } from "@/shared/types";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate  } from 'react-router-dom';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -33,6 +33,7 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home setSelectedPage={setSelectedPage} />} />
         <Route path="/about" element={<About setSelectedPage={setSelectedPage}  />} />
         <Route path="/services" element={<Services setSelectedPage={setSelectedPage}/>} />
