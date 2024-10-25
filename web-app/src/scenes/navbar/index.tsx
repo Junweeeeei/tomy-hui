@@ -35,22 +35,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                 <div className={`${flexBetween} w-full`}>
                   <div className={`${flexBetween} gap-8 text-2xl`}>
                     <Link
-                      page="Home"
+                      page="HOME"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
                     <Link
-                      page="Services"
+                      page="SERVICES"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
                     <Link
-                      page="About"
+                      page="ABOUT"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
                     <Link
-                      page="Contact"
+                      page="CONTACT"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
@@ -93,22 +93,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
           <div className="ml-[33%] flex flex-col gap-10 text-2xl overflow-y-auto h-[calc(100%-48px)]">
             {/* Adjust height to account for the close button's height */}
             <Link
-              page="Home"
+              page="HOME"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Services"
+              page="SERVICES"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="About"
+              page="ABOUT"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Contact"
+              page="CONTACT"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
