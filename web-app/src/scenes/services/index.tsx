@@ -5,6 +5,7 @@ import ServicesPageGraphics from "@/assets/HomePageBackground.png";
 import Footer from "@/scenes/footer"
 import { motion } from "framer-motion";
 import Service from "./Services";
+import EmailLink from "@/shared/EmailLink";
 
 const services: Array<ServiceType> = [
   {
@@ -162,11 +163,17 @@ const Services = ({ setSelectedPage }: Props) => {
               </motion.div>
 
               {/* BUTTON */}
-              <div className="relative mt-16">
+              <div className="relative mt-8">
                 <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
-                  <ActionButton setSelectedPage={setSelectedPage}>
-                    Send Us Enquiry
-                  </ActionButton>
+                  <EmailLink className="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-blue-800 px-8 py-2 text-neutral-50">
+                    <span className="relative z-10">
+                      Enquire Now
+                    </span>
+                    <span className="absolute inset-0 overflow-hidden rounded-md">
+                      <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-red-700 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
+                      </span>
+                    </span>
+                  </EmailLink>
                 </div>
               </div>
             </div>
