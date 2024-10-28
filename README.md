@@ -25,7 +25,8 @@ app.listen(port, () => {console.log(`Listening on port ${port}`)});
 * from project root /tomy-hui/
 gcloud auth login
 gcloud config set project groovy-ego-439416-u5
-gcloud run deploy --source 
+gcloud run deploy --source .
+(if running project from root project just press enter)
 
 asia-southeast1
 Docker : Y
