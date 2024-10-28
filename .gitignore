@@ -1,1 +1,9 @@
-nodemodules/
+node_modules
+dist/
+build/
+out/
+*.js
+*.js.map
+*.d.ts
+*.local
+*.tsbuildinfo
