@@ -4,6 +4,7 @@ import Home from "@/scenes/home"
 import Services from "@/scenes/services"
 import About from "@/scenes/about"
 import Contact from "@/scenes/contact"
+import ServiceLPS from '@/scenes/services/ServiceLPS'; 
 import { SelectedPage } from "@/shared/types";
 import { Route, Routes, Navigate  } from 'react-router-dom';
 import ScrollToTop from '@/shared/ScrollToTop';
@@ -43,6 +44,10 @@ function App() {
         <Route path="/about" element={<About setSelectedPage={setSelectedPage}  />} />
         <Route path="/services" element={<Services setSelectedPage={setSelectedPage}/>} />
         <Route path="/contact" element={<Contact setSelectedPage={setSelectedPage}/>} />
+        <Route path="/services/service_lps" element={<ServiceLPS setSelectedPage={setSelectedPage}/>} />
+        {/* <Route path="/services/service_elsu" element={<ServiceELSU setSelectedPage={setSelectedPage}/>} />
+        <Route path="/services/service_ucri" element={<ServiceUCRI setSelectedPage={setSelectedPage}/>} />
+        <Route path="/services/service_ei" element={<ServiceEI setSelectedPage={setSelectedPage}/>} /> */}
       </Routes>
       </div> 
     </>
