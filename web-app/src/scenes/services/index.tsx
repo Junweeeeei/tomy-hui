@@ -9,28 +9,32 @@ import EmailLink from "@/shared/EmailLink";
 
 const services: Array<ServiceType> = [
   {
-    title: "Piping",
+    title: "Lightning Protection System",
     description:
-      "Piping",
+      "Our Lightning Protection Systems are designed with the highest safety standards to safeguard your structures and assets. With years of expertise, we implement effective, reliable solutions that minimize risks from lightning strikes, ensuring protection and peace of mind for every client.",
     img: ServicesPageGraphics,
+    route: "/services/service_lps"
   },
   {
-    title: "Electrical Cabling",
+    title: "Electrical Load Supply Upgrading",
     description:
-      "Electrical Cabling",
+      "As your business grows, so do your electrical needs. Our Electrical Load Supply Upgrading service is designed to support expansion by providing reliable upgrades to handle increased power demands. With a focus on safety, efficiency, and minimal disruption, we help you scale seamlessly while safeguarding system stability.",
     img: ServicesPageGraphics,
+    route: "/services/service_elsu"
   },
   {
-    title: "Roofing",
+    title: "Underground Cabling & Routing Installation",
     description:
-      "Roofing",
+      "Our team provides comprehensive underground cabling and routing installation services, ensuring seamless and efficient routing of electrical systems. With a meticulous approach to planning and installation, we meet the demands of each project with a focus on durability and safety, keeping your operations running smoothly.",
     img: ServicesPageGraphics,
+    route: "/services/service_ucri"
   },
   {
-    title: "No Roofing",
+    title: "Electrical Installation",
     description:
-      "No Roofing",
+      "Specializing in electrical installation since our founding, we deliver end-to-end solutions across various industries. Our services cover the installation of essential systems such as electrical wiring, switchboards, and communication lines, ensuring compliance with regulatory standards and a commitment to exceptional quality.",
     img: ServicesPageGraphics,
+    route: "/services/service_ei"
   },
 ];
 
@@ -115,6 +119,7 @@ const Services = ({ setSelectedPage }: Props) => {
                 description={service.description}
                 img={service.img}
                 setSelectedPage={setSelectedPage}
+                route={service.route}
               />
             ))}
           </motion.div>
