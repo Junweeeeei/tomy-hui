@@ -82,24 +82,24 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </div>
                 <p className='mt-5'>If you wish to contact us for more information, please write to us or call us.</p>
                 <div className='mt-5 flex'>
-                  <span className="text-lg font-bold">Telephone: </span>
-                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline">
+                  <span className="text-lg font-bold">Telephone:</span>
+                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
                     6261 1117
                   </a>
                 </div>
                 <div>
-                  <span className="text-lg font-bold">Fax: </span>
-                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline">
+                  <span className="text-lg font-bold">Fax:</span>
+                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
                     6268 9727
                   </a>
                 </div>
                 <div>
                   <span className="text-lg font-bold">Administrative Matters: </span>
-                  <EmailLink> tomyhui_finance@yahoo.com.sg </EmailLink>
+                  <EmailLink className='text-blue-500 text-lg'> tomyhui_finance@yahoo.com.sg </EmailLink>
                 </div>
                 <div>
                   <span className="text-lg font-bold">Project Inquiries: </span>
-                  <EmailLink> tomyhui_finance@yahoo.com.sg </EmailLink>
+                  <EmailLink className='text-blue-500 text-lg'> tomyhui_finance@yahoo.com.sg </EmailLink>
                 </div>
               </div>
               <div>

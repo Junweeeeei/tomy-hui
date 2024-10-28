@@ -55,7 +55,7 @@ const Home = ({ setSelectedPage }: Props) => {
               }}
             >
               <AnchorLink
-                className="rounded-r-xl text-bold bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white"
+                className="rounded-r-xl font-bold bg-blue-600 text-red-700 px-10 py-2 hover:bg-red-700 hover:text-white"
                 onClick={() => setSelectedPage(SelectedPage.About)}
                 href={`#${SelectedPage.About}`}
               >
