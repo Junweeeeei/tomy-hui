@@ -13,28 +13,28 @@ const services: Array<ServiceType> = [
     description:
       "Our Lightning Protection Systems are designed with the highest safety standards to safeguard your structures and assets. With years of expertise, we implement effective, reliable solutions that minimize risks from lightning strikes, ensuring protection and peace of mind for every client.",
     img: ServicesPageGraphics,
-    route: "/services/service_lps"
+    route: "/services/ServiceLPS"
   },
   {
     title: "Electrical Load Supply Upgrading",
     description:
       "As your business grows, so do your electrical needs. Our Electrical Load Supply Upgrading service is designed to support expansion by providing reliable upgrades to handle increased power demands. With a focus on safety, efficiency, and minimal disruption, we help you scale seamlessly while safeguarding system stability.",
     img: ServicesPageGraphics,
-    route: "/services/service_elsu"
+    route: "/services/ServiceELSU"
   },
   {
     title: "Underground Cabling & Routing Installation",
     description:
       "Our team provides comprehensive underground cabling and routing installation services, ensuring seamless and efficient routing of electrical systems. With a meticulous approach to planning and installation, we meet the demands of each project with a focus on durability and safety, keeping your operations running smoothly.",
     img: ServicesPageGraphics,
-    route: "/services/service_ucri"
+    route: "/services/ServiceUCRI"
   },
   {
     title: "Electrical Installation",
     description:
       "Specializing in electrical installation since our founding, we deliver end-to-end solutions across various industries. Our services cover the installation of essential systems such as electrical wiring, switchboards, and communication lines, ensuring compliance with regulatory standards and a commitment to exceptional quality.",
     img: ServicesPageGraphics,
-    route: "/services/service_ei"
+    route: "/services/ServiceEI"
   },
 ];
 
@@ -141,8 +141,8 @@ const Services = ({ setSelectedPage }: Props) => {
                     }}
                   >
                     <HText>
-                      HUNDRED OF SATISFIED{" "}
-                      <span className="text-primary-300">CLIENTS</span>
+                      YOUR TRUSTED CHOICE FOR{" "}
+                      <span className="text-red-700">ELECTRICAL SERVICES</span>
                     </HText>
                   </motion.div>
                 </div>
@@ -159,18 +159,15 @@ const Services = ({ setSelectedPage }: Props) => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                <p className="my-5">
-                  Tomy Hui Electrical Engineering is proud to annouce that we hold certificates of ....
-                </p>
-                <p className="mb-5">
-                  We wil do our best to serve!
+                <p className="my-5 text-xl">
+                  Join our community of satisfied clients who trust us for reliable, high-quality electrical services tailored to meet your needs!
                 </p>
               </motion.div>
 
               {/* BUTTON */}
               <div className="relative mt-8">
                 <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
-                  <EmailLink className="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-blue-800 px-8 py-2 text-neutral-50">
+                  <EmailLink className="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-blue-800 px-8 py-3 text-neutral-50">
                     <span className="relative z-10">
                       Enquire Now
                     </span>
