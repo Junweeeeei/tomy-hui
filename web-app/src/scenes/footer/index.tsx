@@ -42,7 +42,7 @@ const Footer = () => {
             <h4 className="font-bold text-2xl">Company</h4>
             <a href="/about" className="my-5 block">About</a>
             <a href="/contact" className="my-5 block">Contact</a>
-            <a href="/about" className="my-5 block">Privacy</a>
+            <a href="/privacy" className="my-5 block">Privacy</a>
           </div>
         </div>
       </div>
