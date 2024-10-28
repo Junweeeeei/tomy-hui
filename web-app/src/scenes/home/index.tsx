@@ -14,7 +14,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="md:h-full">
-      <div className="relative bg-home-background bg-cover md:min-h-800px min-h-[800px] md:mifn flex items-center justify-center"> {/* Background image container */}
+      <div className="relative bg-home-background bg-cover md:min-h-800px min-h-[800px] md:min flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
 
