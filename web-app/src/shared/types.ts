@@ -12,6 +12,14 @@ export interface ServiceType {
   route: string;
 }
 
+export interface ProjectType {
+  title: string;
+  description: string;
+  img: string;
+  route: string;
+}
+
+
 export interface ClassType {
   name: string;
   description?: string;
