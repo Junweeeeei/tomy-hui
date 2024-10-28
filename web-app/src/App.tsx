@@ -5,7 +5,7 @@ import Services from "@/scenes/services"
 import About from "@/scenes/about"
 import Contact from "@/scenes/contact"
 import { SelectedPage } from "@/shared/types";
-import { BrowserRouter as Router, Route, Routes, Navigate  } from 'react-router-dom';
+import { Route, Routes, Navigate  } from 'react-router-dom';
 import ScrollToTop from '@/shared/ScrollToTop';
 
 function App() {

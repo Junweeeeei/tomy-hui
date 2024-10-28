@@ -1,7 +1,6 @@
-import React from 'react'
 import Footer from '@/scenes/footer'
 import { motion } from "framer-motion";
-import { ServiceType, SelectedPage } from "@/shared/types";
+import { SelectedPage }  from "@/shared/types";
 import GoogleMapComponent from '@/shared/GoogleMapComponent';
 import EmailLink from '@/shared/EmailLink';
 

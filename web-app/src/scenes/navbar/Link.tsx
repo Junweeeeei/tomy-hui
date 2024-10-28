@@ -1,5 +1,5 @@
 import { SelectedPage } from "@/shared/types";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+// import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 
 type Props = {

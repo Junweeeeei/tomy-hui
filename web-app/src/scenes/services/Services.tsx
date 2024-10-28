@@ -1,6 +1,5 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const childVariant = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -19,6 +18,7 @@ const Services = ({ title, description, img, setSelectedPage }: Props) => {
     <motion.div
       variants={childVariant}
       className="elative group overflow-hidden transition-shadow duration-300 hover:shadow-2xl rounded-md"
+      onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
     >
       <a 
         href="#" 

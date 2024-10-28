@@ -1,9 +1,7 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
+// import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
-import ActionButton from "@/shared/ActionButton";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
-import HomePageBackground from "@/assets/HomePageBackground.png";
 import Stats from "@/scenes/stats";
 import Footer from "@/scenes/footer"
 
@@ -12,7 +10,7 @@ type Props = {
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width:700px)");
+  // const isAboveMediumScreens = useMediaQuery("(min-width:700px)");
 
   return (
     <section id="home" className="md:h-full">
