@@ -45,7 +45,7 @@ const a5_2 = `Tomy Hui Pte Ltd`
 
 const Privacy = ({ setSelectedPage }: Props) => {
   return (
-    <section id="services" className="mx-auto min-h-full w-full">
+    <section id="privacy" className="mx-auto min-h-full w-full">
       <div className="relative bg-white bg-cover mt-32"> {/* Background image container */}
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center mb-32">

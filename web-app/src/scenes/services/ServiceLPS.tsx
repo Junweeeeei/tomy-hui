@@ -41,8 +41,8 @@ const projects: Array<ProjectType> = [
 
 const ServiceLPS = ({ setSelectedPage }: Props) => {
   return (
-    <section id="services" className="mx-auto min-h-full w-full">
-      <div className="relative bg-home-background bg-cover md:h-1/4"> {/* Background image container */}
+    <section id="serviceLPS" className="md:h-full">
+      <div className="relative bg-home-background bg-cover md:min-h-400px min-h-[400px] md:min flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div

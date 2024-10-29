@@ -52,7 +52,7 @@ type Props = {
 const Services = ({ setSelectedPage }: Props) => {
   return (
     <section id="services" className="md:h-full">
-      <div className="relative bg-home-background bg-cover md:min-h-300px min-h-[400px] md:min flex items-center justify-center"> {/* Background image container */}
+      <div className="relative bg-home-background bg-cover md:min-h-400px min-h-[400px] md:min flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
