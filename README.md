@@ -1,32 +1,60 @@
-# DevOrNot
-Engineering Portfolio 
+# DevOrNot Engineering Portfolio
 
-# Project Dependencies
-npm install <br>
-npm install vite <br>
-npm install react-router-dom <br>
-npm install @react-google-maps/api <br>
+### Project Dependencies
+To set up the project, install the following dependencies:
+```bash
+npm install
+npm install vite
+npm install react-router-dom
+npm install @react-google-maps/api
+```
 
-
-# To Run Application Locally
+### Running the Application Locally
+To start the development server, run:
+```bash
 npm run dev
+```
 
-# Google Cloud Run for hosting website
-* Install express for main project (one layer above web-app)
-npm install express
-* Create index.js containing express code in main project folder (one layer above web-app)
+### Deploying on Google Cloud Run
+1. **Initialize the Project**  
+   ```bash
+   npm init -y
+   ```
 
-* from project root /tomy-hui/
-gcloud auth login
-gcloud config set project groovy-ego-439416-u5
-gcloud run deploy --source .
-(if running project from root project just press enter)
+2. **Update `package.json`**  
+   Change the script section to:
+   ```json
+   "start": "node index.js"
+   ```
 
-asia-southeast1
-Docker : Y
-Unauthenticated Invocations (open access on internet): Y
+3. **Install Express in the Root Folder**  
+   ```bash
+   npm install express
+   ```
 
-# Changing Domain Name
+4. **Create `index.js` in the Root Folder**  
+   Add your Express code to this file to serve the application.
 
+5. **Google Cloud CLI Commands**  
+   From the root directory (`/tomy-hui/`), authenticate and set your Google Cloud project:
+   ```bash
+   gcloud auth login
+   gcloud config set project groovy-ego-439416-u5
+   ```
 
-Reference from https://www.youtube.com/watch?v=NMnKGHgw8aM
+6. **Deploy to Google Cloud Run**  
+   Run the deployment command:
+   ```bash
+   gcloud run deploy --source .
+   ```
+   - **Region**: `asia-southeast1`
+   - **Docker**: Select "Y"
+   - **Unauthenticated Invocations**: Select "Y" for open access
+
+### Changing Domain Name
+You may later update to a custom domain through the Google Cloud Console.
+
+---
+
+**Reference**  
+Watch the full setup guide: [YouTube Tutorial](https://www.youtube.com/watch?v=NMnKGHgw8aM)
