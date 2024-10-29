@@ -14,7 +14,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const handlePageClick = (page: SelectedPage) => {
     window.scrollTo(0, 0); // Scroll to the top
     setSelectedPage(page); // Call your existing function to set the selected page
-};
+  };
 
   return (
     <RouterLink
