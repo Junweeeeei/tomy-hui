@@ -45,14 +45,19 @@ npm run dev
 6. **Deploy to Google Cloud Run**  
    Run the deployment command:
    ```bash
-   gcloud run deploy --source .
+   gcloud run deploy tomyhui-service
    ```
    - **Region**: `asia-southeast1`
    - **Docker**: Select "Y"
    - **Unauthenticated Invocations**: Select "Y" for open access
 
+
 ### Changing Domain Name
 You may later update to a custom domain through the Google Cloud Console.
+
+
+### Errors
+Ensure that root project files are not ignored in the .gitignore file
 
 ---
 
