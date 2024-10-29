@@ -50,7 +50,7 @@ const Privacy = ({ setSelectedPage }: Props) => {
       </div>
       <div className="py-10 md:h-5/7 items-center justify-center mb-32">
         <motion.div className="mx-auto w-1/2"
-          onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
+          onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
           {/* HEADER */}
           <motion.div

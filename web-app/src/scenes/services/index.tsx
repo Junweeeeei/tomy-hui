@@ -129,7 +129,7 @@ const Services = ({ setSelectedPage }: Props) => {
             <div>
               {/* TITLE */}
               <div className="relative">
-                <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                <div className="before:absolute before:-top-20 before:-left-20 before:z-[1]">
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -166,7 +166,7 @@ const Services = ({ setSelectedPage }: Props) => {
 
               {/* BUTTON */}
               <div className="relative mt-8">
-                <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1]">
                   <EmailLink className="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-blue-800 px-8 py-3 text-neutral-50">
                     <span className="relative z-10">
                       Enquire Now
