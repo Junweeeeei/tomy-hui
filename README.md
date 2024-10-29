@@ -15,12 +15,6 @@ npm run dev
 * Install express for main project (one layer above web-app)
 npm install express
 * Create index.js containing express code in main project folder (one layer above web-app)
-const express = require('express');
-const app = express();
-app.use(express.json());
-app.use(express.static('web-app/dist'));
-const port = process.env.PORT || 8800;
-app.listen(port, () => {console.log(`Listening on port ${port}`)});
 
 * from project root /tomy-hui/
 gcloud auth login
