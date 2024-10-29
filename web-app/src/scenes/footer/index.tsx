@@ -1,6 +1,7 @@
 import Logo from "@/assets/Logo_resized.png";
 import EmailLink from "@/shared/EmailLink";
 import PhoneNumber from "@/shared/PhoneNumber";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -40,9 +41,9 @@ const Footer = () => {
         <div className="mt-16 basis-1/4 md:mt-0 ">
           <div>
             <h4 className="font-bold text-2xl">Company</h4>
-            <a href="/about" className="my-5 block">About</a>
-            <a href="/contact" className="my-5 block">Contact</a>
-            <a href="/privacy" className="my-5 block">Privacy</a>
+            <Link to="/about" className="my-5 block">About</Link>
+            <Link to="/contact" className="my-5 block">Contact</Link>
+            <Link to="/privacy" className="my-5 block">Privacy</Link>
           </div>
         </div>
       </div>
