@@ -1,5 +1,6 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const childVariant = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -21,8 +22,8 @@ const Services = ({ title, img, setSelectedPage, route }: Props) => {
       className="relative group overflow-hidden transition-shadow duration-300 hover:shadow-2xl rounded-md"
       onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
     >
-      <a 
-        href={route} 
+      <Link 
+        to={route} 
         key={title} 
         className="relative"
       >
@@ -39,7 +40,7 @@ const Services = ({ title, img, setSelectedPage, route }: Props) => {
               {title}
             </div>
         </div>
-      </a>
+      </Link>
     </motion.div>
   );
 };
