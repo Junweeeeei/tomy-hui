@@ -3,10 +3,7 @@
 ### Project Dependencies
 To set up the project, install the following dependencies:
 ```bash
-npm install
-npm install vite
-npm install react-router-dom
-npm install @react-google-maps/api
+npm install 
 ```
 
 ### Running the Application Locally
