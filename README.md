@@ -57,7 +57,8 @@ You may later update to a custom domain through the Google Cloud Console.
 
 
 ### Errors
-Ensure that root project files are not ignored in the .gitignore file
+Ensure that root project files are not ignored in the .gitignore file 
+Ignoring git modules files will cause Google Cloud Run to have issues deploying the web app. 
 
 ---
 
