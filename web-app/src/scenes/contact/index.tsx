@@ -7,11 +7,13 @@ import EmailLink from '@/shared/EmailLink';
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
-const contact_des = `Thank you for your interest in our engineering services. 
-                    Whether you have a question, seek a consultation, 
-                    or are ready to begin your next project, 
-                    our team of experts is ready to help. 
-                    Feel free to contact us through any of the following methods:`
+
+const contact_des = `Got a project in mind? We’re excited to help! With our extensive experience in electrical installation and upgrades, 
+            we’re equipped to tackle any challenge and deliver exceptional results. 
+            Whether you're looking to plan a new development or enhance existing systems, 
+            our team is here with tailored solutions just for you. Have questions, 
+            need a consultation, or ready to kick off your next project? 
+            Feel free to reach out to us through any of the following methods—we're here to assist!`
 
 
 const Contact = ({ setSelectedPage }: Props) => {
@@ -80,7 +82,6 @@ const Contact = ({ setSelectedPage }: Props) => {
                   <p>Alpha Industrial Building</p>
                   <p>Singapore 608599</p>
                 </div>
-                <p className='mt-5'>If you wish to contact us for more information, please write to us or call us.</p>
                 <div className='mt-5 flex'>
                   <span className="text-lg font-bold">Telephone:</span>
                   <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
@@ -88,26 +89,16 @@ const Contact = ({ setSelectedPage }: Props) => {
                   </a>
                 </div>
                 <div>
-                  <span className="text-lg font-bold">Fax:</span>
-                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
-                    6268 9727
-                  </a>
-                </div>
-                <div>
-                  <span className="text-lg font-bold">Administrative Matters: </span>
-                  <EmailLink className='text-blue-500 text-lg'> tomyhui_finance@yahoo.com.sg </EmailLink>
-                </div>
-                <div>
                   <span className="text-lg font-bold">Project Inquiries: </span>
-                  <EmailLink className='text-blue-500 text-lg'> tomyhui_finance@yahoo.com.sg </EmailLink>
+                  <EmailLink className='text-blue-500 text-lg'> tomyhui_elect@yahoo.com.sg </EmailLink>
                 </div>
               </div>
               <div>
                 <p className='text-xl font-bold'>
-                  Business Hours:
+                  Office Operating Hours:
                 </p>
                 <p className='mt-5'>
-                  Monday – Friday: 9:00 AM – 6:00 PM
+                  Monday – Friday: 8:30 AM – 5:30 PM
                 </p>
                 <p>
                   Saturday, Sunday & Public Holiday: Closed

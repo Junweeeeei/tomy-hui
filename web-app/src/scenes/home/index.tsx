@@ -1,17 +1,17 @@
 // import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Stats from "@/scenes/stats";
 import Footer from "@/scenes/footer"
+
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-  // const isAboveMediumScreens = useMediaQuery("(min-width:700px)");
-
+  
   return (
     <section id="home" className="md:h-full">
       <div className="relative bg-home-background bg-cover md:min-h-800px min-h-[800px] md:min flex items-center justify-center"> {/* Background image container */}
@@ -38,7 +38,7 @@ const Home = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="w-full md:w-3/4 lg:w-2/3 text-5xl font-extrabold text-white">
-                Disciplined and Trustworthy Electrical Engineering Service
+                Powering Excellence in Electrical Engineering Since 1989
               </p>
             </motion.div>
 
@@ -54,13 +54,11 @@ const Home = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <AnchorLink
-                className="rounded-r-xl font-bold bg-blue-600 text-red-700 px-10 py-2 hover:bg-red-700 hover:text-white"
-                onClick={() => setSelectedPage(SelectedPage.About)}
-                href={`#${SelectedPage.About}`}
-              >
-                Learn More
-              </AnchorLink>
+              <div className="rounded-r-xl font-bold bg-blue-600 text-white px-10 py-2 hover:bg-red-700 hover:text-white">
+                <Link to="/about" className="block w-full text-center">
+                  Learn More
+                </Link>
+              </div>
             </motion.div>
           </div>
         </motion.div>

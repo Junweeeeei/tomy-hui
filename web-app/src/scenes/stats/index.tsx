@@ -1,5 +1,11 @@
 import Counter from "@/shared/Counter"
 
+const stats_des = `With over 25 years of expertise, Tomy Hui Electrical Engineering Pte Ltd has established a 
+                  strong reputation in Singapore’s electrical engineering industry through dedication, quality, and continuous growth. 
+                  Our services span the maintenance, installation, and enhancement of electrical systems across diverse sectors, 
+                  including fire alarms and communication networks. Committed to exceeding client expectations, we bring reliable 
+                  service, high standards, and a client-first approach to every project.`
+
 const Stats = () => {
   return (
     <section className="bg-gray-20 py-16">
@@ -12,11 +18,7 @@ const Stats = () => {
             Meet Tomy Hui Engineering
           </p>
           <p className="text-xl text-black">
-            With over 25 years of industry expertise, 
-            Tomy Hui is a leader in providing advanced electrical infrastructure solutions. 
-            Our extensive expertise in the industry reflects our dedication to excellence and innovation. 
-            We specialize in various underground projects, utilizing our in-depth knowledge and technical 
-            skills to tackle the complex challenges of electrical infrastructure development.
+            {stats_des}
           </p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">
@@ -34,7 +36,7 @@ const Stats = () => {
           </div>
           {/* Countup timer */}
           <div className="mt-20 w-full mx-auto text-red-900">
-            <Counter targetValue={25} targetDuration={3000} />
+            <Counter targetValue={90} targetDuration={3000} />
           </div>
         </div>
       </div>

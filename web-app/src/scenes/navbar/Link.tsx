@@ -6,9 +6,10 @@ type Props = {
   page: string;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  className?: string;
 };
 
-const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
+const NavbarLink = ({ page, selectedPage, setSelectedPage, className=`text-blue-700` }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
 
   const handlePageClick = (page: SelectedPage) => {
@@ -18,10 +19,9 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
 
   return (
     <RouterLink
-      className={`${selectedPage === lowerCasePage ? "text-red-600" : ""}
-        transition duration-500 hover:text-gray-100 font-semibold text-blue-700 text-lg
+      className={`${selectedPage === lowerCasePage ? `text-red-600` : `${className}`}
+        transition duration-500 hover:text-gray-100 font-semibold text-lg 
       `}
-      // href={`#${lowerCasePage}`}
       to={`/${lowerCasePage}`} // Navigates to a new page based on the page name
       onClick={() => handlePageClick(lowerCasePage)}
     >
@@ -30,4 +30,4 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   );
 };
 
-export default Link;
+export default NavbarLink;
