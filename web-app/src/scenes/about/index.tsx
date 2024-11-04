@@ -1,7 +1,7 @@
 import Footer from '@/scenes/footer'
 import { motion } from "framer-motion";
 import { SelectedPage } from "@/shared/types";
-import CerticateImage from "@/assets/AboutPageCertificate.png";
+import CerticateImage from "@/assets/Certificate.png";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
