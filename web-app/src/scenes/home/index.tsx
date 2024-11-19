@@ -37,7 +37,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="w-full md:w-3/4 lg:w-2/3 text-5xl font-extrabold text-white">
+              <p className="w-full md:w-3/4 lg:w-1/2 text-5xl font-extrabold text-white">
                 Powering Excellence in Electrical Engineering Since 1989
               </p>
             </motion.div>

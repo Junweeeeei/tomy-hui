@@ -87,14 +87,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
           style={{ transform: isMenuToggled ? 'translateX(0)' : 'translateX(100%)' }}
         >
           {/* CLOSE ICON */}
-          <div className="flex justify-end p-12 transition-opacity duration-300 ease-in-out">
+          <div className="flex justify-end p-6 transition-opacity duration-300 ease-in-out">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
               <XMarkIcon className="h-6 w-6 text-gray-400" />
             </button>
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[33%] mr-[33%] flex flex-col gap-10 text-2xl overflow-y-auto h-[calc(100%-48px)] w-[50%]">
+          <div className="ml-[25%] mr-[25%] flex flex-col gap-10 text-2xl overflow-y-auto h-[calc(100%-48px)] w-[60%]">
             {/* Adjust height to account for the close button's height */}
             <NavbarLink page="HOME" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
             <NavbarLink page="SERVICES" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />

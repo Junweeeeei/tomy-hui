@@ -56,7 +56,7 @@ const Services = ({ setSelectedPage }: Props) => {
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
-          className="mx-auto w-1/2 md:w-1/2 lg:w-2/3 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
+          className="mx-auto w-1/2 md:w-1/2 lg:w-1/2 md:h-full items-center justify-center md:flex relative z-10 overflow-hidden"
           onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
         >
           <div className="z-10 md:basis-full">
@@ -75,8 +75,8 @@ const Services = ({ setSelectedPage }: Props) => {
               <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
                 Services
               </p>
-              <p className="mt-5 w-1/2 text-xl text-white ">
-                Over 25 years of industry expertise in delivering underground infrastructure solutions
+              <p className="mt-5 w-full text-xl text-white ">
+                Solutions for All Your Electrical Needs
               </p>
             </motion.div>
           </div>
@@ -106,7 +106,7 @@ const Services = ({ setSelectedPage }: Props) => {
           </motion.div>
           {/* SERVICES */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center gap-8 pt-10"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-8 pt-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

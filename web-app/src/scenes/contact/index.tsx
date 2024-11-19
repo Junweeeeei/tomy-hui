@@ -42,8 +42,8 @@ const Contact = ({ setSelectedPage }: Props) => {
               <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
                 Contact
               </p>
-              <p className="mt-5 w-1/2 text-xl text-white ">
-                Contact Our Team of Experts for Engineering Solutions.
+              <p className="mt-5 w-full text-xl text-white ">
+                Contact Our Team Of Experts For Engineering Solutions.
               </p>
             </motion.div>
           </div>
@@ -89,7 +89,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                   </a>
                 </div>
                 <div>
-                  <span className="text-lg font-bold">Project Inquiries: </span>
+                  <span className="text-lg font-bold">Project Enquiries: </span>
                   <EmailLink className='text-blue-500 text-lg'> tomyhui_elect@yahoo.com.sg </EmailLink>
                 </div>
               </div>

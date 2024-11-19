@@ -6,23 +6,9 @@ import CerticateImage from "@/assets/Certificate.png";
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
-const company_des_1 = `TOMY HUI ELECTRICAL ENGINEERING embarked on its journey on 31st
-            August, 1989, with a modest inception. With a workforce of just two individuals,
-            our operations focused on the upkeep, expansion, and modification of various
-            electrical systems. Our expertise encompasses a range of projects, including the
-            maintenance, installation, and enhancement of electrical, fire alarm, telephone,
-            computer, and switchboard systems.`
-
-const company_des_2 = `In our inaugural year, our team expanded from 2 members to 8, a
-            testament to our early growth. Over the following five years, we
-            bolstered our staff to 33 dedicated professionals. By 1994, we took a
-            decisive step and boldly entered new terrain, taking on innovative
-            electrical construction projects. Marking the celebration of our fifth
-            anniversary, TOMY HUI ELECTRICAL ENGINEERING achieved the
-            status of a private limited entity. Furthermore, we formalized our
-            commitment by registering as Goods & Services Tax (GST) traders with
-            the Inland Revenue Authority of Singapore (IRAS).`
-
+const company_des_1 = `Founded on August 31, 1989, Tomy Hui Electrical Engineering Pte Ltd has established a strong reputation in Singapore’s electrical engineering industry through dedication, quality, and steady growth. Initially focused on the upkeep, installation, and enhancement of various electrical systems, we have expanded our expertise across diverse sectors, including fire alarms, communication networks, and switchboards.   
+Our commitment to delivering reliable service and maintaining high standards has earned us the trust and loyalty of the majority of our earliest clients. In 2009, we achieved Level 2 of the ME05 workhead for electrical engineering under the Building and Construction Authority (BCA), further advancing to Level 5 in 2018. Additionally, we earned the bizSAFE Star certification in 2012, demonstrating our dedication to workplace safety and health.   
+As part of our commitment to quality and safety, we adhere to internationally recognized standards, including ISO 9001:2015 for quality management systems and OHSAS 45001:2018 for occupational health and safety. Guided by a client-first mindset, we strive to exceed expectations in every project, delivering tailored solutions with unwavering quality and reliability.`
 
 const About = ({ setSelectedPage }: Props) => {
   return (
@@ -48,10 +34,10 @@ const About = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
-                About
+                About Us
               </p>
-              <p className="mt-5 w-1/2 text-xl text-white ">
-                Over 25 years of industry expertise in delivering underground infrastructure solutions
+              <p className="mt-5 w-full text-xl text-white ">
+                Over 25 Years of Expertise in Electrical Engineering
               </p>
             </motion.div>
           </div>
@@ -76,9 +62,6 @@ const About = ({ setSelectedPage }: Props) => {
             <p className='font-bold text-5xl'>Company Profile</p>
             <p className="my-5">
               {company_des_1}
-            </p>
-            <p className="my-5">
-              {company_des_2}
             </p>
           </motion.div>
         </motion.div>

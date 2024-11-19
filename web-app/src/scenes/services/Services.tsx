@@ -36,7 +36,7 @@ const Services = ({ title, img, setSelectedPage, route }: Props) => {
         </div>
         {/* Solid Transparent Blue Section */}
         <div className="absolute bottom-0 left-0 right-0 bg-blue-600/40 h-1/3 flex items-end p-6">
-            <div className="text-white text-2xl font-bold text-center flex items-center justify-center w-full h-full"> {/* Centering text */}
+            <div className="sm:text-xs md:text-xs lg:text-l xl:text-xl text-white font-bold text-center flex items-center justify-center w-full h-full"> {/* Centering text */}
               {title}
             </div>
         </div>
