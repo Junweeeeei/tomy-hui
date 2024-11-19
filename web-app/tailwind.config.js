@@ -26,14 +26,20 @@ export default {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        sahitya: ["Sahitya", "serif"],
+        nunito: ["Nunito", "sans-serif"],
+        sourceserif: ["Source Serif 4", "serif"],
+        markazi: ["Markazi Text", "serif"],
       },
       content: {
       },
     },
     screens: {
-      xs: "480px",
-      sm: "768px",
-      md: "1060px",
+      xs: "480px",  // Extra small devices like phones in portrait mode
+      sm: "768px",  // Small devices like phones in landscape mode and small tablets
+      md: "1060px", // Medium devices like tablets or small laptops
+      lg: "1280px", // Large devices like laptops and desktops
+      xl: "1440px", // Extra large screens like large desktop monitors      
     },
   },
   plugins: [],
