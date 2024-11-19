@@ -66,7 +66,7 @@ const ServiceUCRI = ({ setSelectedPage }: Props) => {
                 Underground Cabling & Routing Installation
               </p>
               <p className="mt-5 w-3/4 text-xl text-white ">
-                Expert installation of underground cabling systems for reliable and efficient communication networks.
+                Expert installation of underground cabling systems for reliable and efficient communication networks
               </p>
             </motion.div>
           </div>

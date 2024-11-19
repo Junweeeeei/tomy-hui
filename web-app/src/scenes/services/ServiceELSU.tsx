@@ -66,7 +66,7 @@ const ServiceELSU = ({ setSelectedPage }: Props) => {
                 Electrical Load Supply Upgrading
               </p>
               <p className="mt-5 w-3/4 text-xl text-white ">
-                Enhancement of existing electrical systems to accommodate increased power demands and improve overall efficiency.
+                Enhancement of existing electrical systems to accommodate increased power demands and improve overall efficiency
               </p>
             </motion.div>
           </div>

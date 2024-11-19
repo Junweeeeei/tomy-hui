@@ -43,7 +43,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 Contact
               </p>
               <p className="mt-5 w-full text-xl text-white ">
-                Contact Our Team Of Experts For Engineering Solutions.
+                Contact Our Team Of Experts For Engineering Solutions
               </p>
             </motion.div>
           </div>

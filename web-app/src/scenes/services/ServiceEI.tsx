@@ -66,7 +66,7 @@ const ServiceEI = ({ setSelectedPage }: Props) => {
                 Electrical Installation
               </p>
               <p className="mt-5 w-3/4 text-xl text-white ">
-                Professional setup of electrical systems and components to ensure safe and efficient power distribution.
+                Professional setup of electrical systems and components to ensure safe and efficient power distribution
               </p>
             </motion.div>
           </div>

@@ -66,7 +66,7 @@ const ServiceLPS = ({ setSelectedPage }: Props) => {
                 Lightning Protection System
               </p>
               <p className="mt-5 w-3/4 text-xl text-white ">
-                Installation of lightning protection systems to safeguard livehood.
+                Installation of lightning protection systems to safeguard livehood
               </p>
             </motion.div>
           </div>
