@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+const TEXT_SIZE = "xs:text-6xl sm:text-6xl md:text-6xl lg:text-8xl xl:text-10xl";
+
 interface Props {
   targetValue: number;
   targetDuration: number; // Duration in milliseconds
@@ -55,11 +57,11 @@ const Counter = ({ targetValue, targetDuration }: Props) => {
     <div className="items-center flex w-3/5">
       {count > 10 ? (
         <>
-          <p className="flex-grow text-center mx-auto text-8xl font-extrabold">{count}</p>
-          <p className="flex-grow text-center mx-auto text-8xl font-extrabold">+</p>
+          <p className={`${TEXT_SIZE} flex-grow text-center mx-auto font-extrabold`}>{count}</p>
+          <p className={`${TEXT_SIZE} flex-grow text-center mx-auto font-extrabold`}>+</p>
         </>
       ) : (
-        <p className="w-full text-center mx-auto text-8xl font-extrabold">{count}</p>
+        <p className={`${TEXT_SIZE} w-full text-center mx-auto font-extrabold`}>{count}</p>
       )}
     </div>
   );
