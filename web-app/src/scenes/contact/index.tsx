@@ -75,7 +75,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 Office Address:
                 </p>
                 <div>
-                  <p className='mt-5 text-xl font-bold'>
+                  <p className='mt-5 text-xl font-bold font-sahitya'>
                     Tomy Hui Electrical Engineering Pte. Ltd.
                   </p>
                   <p>7 Toh Guan Road East #03-03</p>
@@ -84,7 +84,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </div>
                 <div className='mt-5 flex'>
                   <span className="text-lg font-bold">Telephone:</span>
-                  <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
+                  <a href="tel:+62611117" className="text-lg text-blue-500 hover:underline ml-1">
                     6261 1117
                   </a>
                 </div>
