@@ -35,7 +35,7 @@ export default {
       },
     },
     screens: {
-      xs: "480px",  // Extra small devices like phones in portrait mode
+      xs: "360px",  // Extra small devices like phones in portrait mode
       sm: "768px",  // Small devices like phones in landscape mode and small tablets
       md: "1060px", // Medium devices like tablets or small laptops
       lg: "1280px", // Large devices like laptops and desktops
