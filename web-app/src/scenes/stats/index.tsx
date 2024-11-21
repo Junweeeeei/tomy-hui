@@ -14,7 +14,7 @@ const Stats = () => {
           <p className="text-xl font-extrabold text-red-900 ">
             About us
           </p>
-          <p className="my-5 text-2xl font-sans font-bold text-blue-900">
+          <p className="my-5 text-2xl font-bold text-blue-900">
             Meet Tomy Hui Engineering
           </p>
           <p className="text-xl text-black">
