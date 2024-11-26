@@ -6,9 +6,11 @@ import CerticateImage from "@/assets/Certificate.png";
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
-const company_des_1 = `Founded on August 31, 1989, Tomy Hui Electrical Engineering Pte Ltd has established a strong reputation in Singapore’s electrical engineering industry through dedication, quality, and steady growth. Initially focused on the upkeep, installation, and enhancement of various electrical systems, we have expanded our expertise across diverse sectors, including fire alarms, communication networks, and switchboards.   
-Our commitment to delivering reliable service and maintaining high standards has earned us the trust and loyalty of the majority of our earliest clients. In 2009, we achieved Level 2 of the ME05 workhead for electrical engineering under the Building and Construction Authority (BCA), further advancing to Level 5 in 2018. Additionally, we earned the bizSAFE Star certification in 2012, demonstrating our dedication to workplace safety and health.   
-As part of our commitment to quality and safety, we adhere to internationally recognized standards, including ISO 9001:2015 for quality management systems and OHSAS 45001:2018 for occupational health and safety. Guided by a client-first mindset, we strive to exceed expectations in every project, delivering tailored solutions with unwavering quality and reliability.`
+const company_des_1 = `Founded on August 31, 1989, Tomy Hui Electrical Engineering Pte Ltd has established a strong reputation in Singapore’s electrical engineering industry through dedication, quality, and steady growth. Initially focused on the upkeep, installation, and enhancement of various electrical systems, we have since expanded our expertise across diverse sectors, including fire alarms, communication networks, and switchboards.`
+const company_des_2 = `Our commitment to delivering reliable service and maintaining high standards has earned us the trust and loyalty of the majority of our earliest clients.`
+const company_des_3 = `In 2009, we achieved Level 2 of the ME05 workhead for electrical engineering under the Building and Construction Authority (BCA), and further advanced to Level 5 in 2018. Additionally, we earned the bizSAFE Star certification in 2012, demonstrating our dedication to workplace safety and health.`
+const company_des_4 = `As part of our commitment to quality and safety, we adhere to internationally recognized standards, including ISO 9001:2015 for quality management systems and OHSAS 45001:2018 for occupational health and safety.`
+const company_des_5 = `Guided by a client-first mindset, we strive to exceed expectations in every project, delivering tailored solutions with unwavering quality and reliability.`
 
 const About = ({ setSelectedPage }: Props) => {
   return (
@@ -62,6 +64,18 @@ const About = ({ setSelectedPage }: Props) => {
             <p className='font-bold text-5xl'>Company Profile</p>
             <p className="my-5">
               {company_des_1}
+            </p>
+            <p className="my-5">
+              {company_des_2}
+            </p>
+            <p className="my-5">
+              {company_des_3}
+            </p>
+            <p className="my-5">
+              {company_des_4}
+            </p>
+            <p className="my-5">
+              {company_des_5}
             </p>
           </motion.div>
         </motion.div>
