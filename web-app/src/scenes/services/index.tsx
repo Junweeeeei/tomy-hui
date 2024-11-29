@@ -1,5 +1,3 @@
-
-import HText from "@/shared/HText";
 import { ServiceType, SelectedPage } from "@/shared/types";
 import ServicesPageGraphics from "@/assets/HomePageBackground.png";
 import Footer from "@/scenes/footer"
@@ -140,10 +138,10 @@ const Services = ({ setSelectedPage }: Props) => {
                       visible: { opacity: 1, x: 0 },
                     }}
                   >
-                    <HText>
+                    <p className="font-semibold text-3xl">
                       YOUR TRUSTED CHOICE FOR{" "}
                       <span className="text-red-700">ELECTRICAL SERVICES</span>
-                    </HText>
+                    </p>
                   </motion.div>
                 </div>
               </div>

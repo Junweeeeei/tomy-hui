@@ -1,4 +1,4 @@
-import Logo from "@/assets/Logo_resized.png";
+import Logo from "@/assets/Logo.svg";
 import EmailLink from "@/shared/EmailLink";
 import PhoneNumber from "@/shared/PhoneNumber";
 import { Link } from "react-router-dom";
@@ -11,10 +11,10 @@ const company_number = "6261 1117"
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 py-16 text-white">
+    <footer className="bg-neutral-300 py-16 text-black">
       <div className="justify-content mx-auto w-1/2 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
-          <img alt="logo" src={Logo} />
+          <img alt="logo" src={Logo} className="h-24 w-full max-h-full max-w-full object-contain" />
           <p className="my-5">
               {footer_des}
           </p>
@@ -25,12 +25,12 @@ const Footer = () => {
             <div className="my-5">
               <span className="my-5">
                 Tel:  
-                <PhoneNumber color="text-white" phoneNumber={company_number}> {company_number}</PhoneNumber>
+                <PhoneNumber color="" phoneNumber={company_number}> {company_number}</PhoneNumber>
               </span>
             </div>
             <div className="my-5">
               <span className="my-5">Project Inquiries </span>
-              <EmailLink className='text-white'> tomyhui_elect@yahoo.com.sg </EmailLink>
+              <EmailLink className=""> tomyhui_elect@yahoo.com.sg </EmailLink>
             </div>
           </div>
         </div>
