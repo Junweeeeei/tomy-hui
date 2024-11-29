@@ -5,7 +5,7 @@ type Props = {
   className?: string; // Optional className prop
 };
 
-const EmailLink = ({ children, className="text-blue-500" }: Props) => {
+const EmailLink = ({ children, className="text-white" }: Props) => {
   const recipient = "tomyhui_finance@yahoo.com.sg"; // Recipient's email
   const subject = encodeURIComponent(""); // Email subject
   const body = encodeURIComponent(""); // Email body

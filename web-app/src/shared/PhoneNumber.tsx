@@ -7,7 +7,7 @@ type Props = {
   color?: string; // Optional color prop
 };
 
-const PhoneNumber = ({ phoneNumber, children, className, color = "text-blue-500" }: Props) => {
+const PhoneNumber = ({ phoneNumber, children, className, color = "text-white" }: Props) => {
   const telLink = `tel:${phoneNumber}`; // Construct the tel link
 
   return (
