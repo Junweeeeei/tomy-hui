@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.svg";
 import NavbarLink from "@/scenes/navbar/Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import EmailLink from "@/shared/EmailLink";
 import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {
   isTopOfPage: boolean;
@@ -71,11 +71,19 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                 </div>
               </div>
             ) : (
-              <button
-                className="rounded-full bg-secondary-500 p-2"
+              <button 
+                className="relative group rounded-full bg-secondary-500 p-3"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <Bars3Icon className="h-6 w-6 text-white" />
+                <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                  <div className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${isMenuToggled ? 'translate-x-10' : ''}`}></div>
+                  <div className={`bg-white h-[2px] w-7 rounded transform transition-all duration-300 ${isMenuToggled ? 'translate-x-10' : ''} delay-75`}></div>
+                  <div className={`bg-white h-[2px] w-7 transform transition-all duration-300 origin-left ${isMenuToggled ? 'translate-x-10' : ''} delay-150`}></div>
+                  <div className={`absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 ${isMenuToggled ? 'translate-x-0 w-12' : 'w-0'}`}>
+                    <div className={`absolute bg-white h-[2px] w-5 transform transition-all duration-500 ${isMenuToggled ? 'rotate-45' : 'rotate-0'} delay-300`}></div>
+                    <div className={`absolute bg-white h-[2px] w-5 transform transition-all duration-500 ${isMenuToggled ? '-rotate-45' : '-rotate-0'} delay-300`}></div>
+                  </div>
+                </div>
               </button>
             )}
           </div>
@@ -83,37 +91,47 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
       </div>
 
       {/* MOBILE MENU MODAL */}
-      {!isAboveMediumScreens && isMenuToggled && (
-        <div
-          className="fixed right-0 bottom-0 z-40 h-full w-[40%] bg-secondary-400 drop-shadow-xl transition-transform duration-500 ease-in-out transform translate-x-full"
-          style={{ transform: isMenuToggled ? 'translateX(0)' : 'translateX(100%)' }}
-        >
-          {/* CLOSE ICON */}
-          <div className="flex justify-end p-6 transition-opacity duration-300 ease-in-out">
-            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
-            </button>
-          </div>
-
-          {/* MENU ITEMS */}
-          <div className="ml-[25%] mr-[25%] flex flex-col gap-10 text-2xl overflow-y-auto h-[calc(100%-48px)] w-[60%]">
-            {/* Adjust height to account for the close button's height */}
-            <NavbarLink page="HOME" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
-            <NavbarLink page="SERVICES" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
-            <NavbarLink page="ABOUT" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
-            <NavbarLink page="CONTACT" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
-            <EmailLink className="group relative h-10 w-36 overflow-hidden rounded-md bg-blue-800 px-4 py-2 text-white font-semibold text-sm text-center items-center">
-              <span className="relative z-10 block truncate whitespace-nowrap">
-                Enquire Now
-              </span>
-              <span className="absolute inset-0 overflow-hidden rounded-md">
-                <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-red-700 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
+      <AnimatePresence>
+        {!isAboveMediumScreens && isMenuToggled && (
+          <motion.div
+            className="flex flex-col items-center fixed right-0 z-40 md:w-1/3 w-1/2 bg-secondary-500 drop-shadow-xl"
+            initial="hidden"
+            whileInView="visible"
+            exit={"hidden"}
+            style=  {{
+              top:`80px`,
+              overflowY: "auto", // Enable vertical scrolling if content overflows
+              borderTopLeftRadius: "24px", 
+              borderBottomLeftRadius: "24px", 
+              maxHeight: "calc(100vh - 128px)",
+            }}
+            viewport={{ once: true, amount: 0 }}
+            transition={{ delay: 0, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: "40%", y: 0 },
+              visible: { opacity: 1, x: 0, y: 0 },
+            }}
+          >
+            {/* MENU ITEMS */}
+            <ul className="flex flex-col gap-10 md:text-2xl text-lg h-[calc(100%-80px)] w-[60%] text-center my-10 items-center">
+              {/* Adjust height to account for the close button's height */}
+              <NavbarLink page="HOME" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
+              <NavbarLink page="SERVICES" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
+              <NavbarLink page="ABOUT" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
+              <NavbarLink page="CONTACT" selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="text-white" />
+              <EmailLink className="group relative md:h-10 md:w-36 h-10 w-32 overflow-hidden rounded-md bg-blue-800 px-4 py-2 text-white font-semibold text-sm text-center items-center">
+                <span className="relative z-10 block truncate whitespace-nowrap">
+                  Enquire Now
                 </span>
-              </span>
-            </EmailLink>
-          </div>
-        </div>
-      )}
+                <span className="absolute inset-0 overflow-hidden rounded-md">
+                  <span className="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-red-700 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
+                  </span>
+                </span>
+              </EmailLink>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
