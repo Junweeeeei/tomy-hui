@@ -36,6 +36,25 @@ const services: Array<ServiceType> = [
   },
 ];
 
+
+const testimonials = [
+  {
+    id: 1,
+    name: "George ( Assistant Manager, Google Products )",
+    feedback: "This is the best service I've ever used!",
+  },
+  {
+    id: 2,
+    name: "Benjamin ( Head of Products, ST Engineering )",
+    feedback: "Absolutely amazing experience. Highly recommend it!",
+  },
+  {
+    id: 3,
+    name: "Michael ( HR Manager, Temasek Group)",
+    feedback: "Superb quality and great support team!",
+  },
+];
+
 const container = {
   hidden: {},
   visible: {
@@ -98,8 +117,7 @@ const Services = ({ setSelectedPage }: Props) => {
           >
             <p>Our Core Services.</p>
             <p className="my-5 text-3xl">
-              Specialised Engineering solution from planning , 
-              designing to building your infrastructure
+            These are our core services, but our expertise extends beyond what's listed here. If you're unsure whether your needs fall within our scope, don't hesitate to reach out – we're here to assist!
             </p>
           </motion.div>
           {/* SERVICES */}
@@ -176,7 +194,38 @@ const Services = ({ setSelectedPage }: Props) => {
                   </EmailLink>
                 </div>
               </div>
-            </div>
+              <div className="mt-16 flex">
+                <div>
+                  <motion.div
+                      className="flex col text-5xl justify-center "
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.5 }}
+                      variants={container}
+                    >
+                      Client Testimonials
+                    </motion.div>
+                    <motion.div
+                      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-8 py-10 px-10"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.5 }}
+                      variants={container}
+                    >
+                      {testimonials.map((testimonials) => (
+                        <div>
+                          <p className="pb-10">
+                            "{testimonials.feedback}"
+                          </p>
+                          <p>
+                            - {testimonials.name}
+                          </p>
+                        </div>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
           </div>
         </motion.div>
       </div>
