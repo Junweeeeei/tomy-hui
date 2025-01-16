@@ -8,4 +8,8 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
   },
+  build: {
+    outDir: 'public', // Set output to public folder
+    assetsDir: 'assets', // Optional: Customize asset subfolder within public
+  },
 });
