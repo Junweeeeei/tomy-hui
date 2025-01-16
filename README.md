@@ -36,13 +36,13 @@ npm run dev
    From the root directory (`/tomy-hui/`), authenticate and set your Google Cloud project:
    ```bash
    gcloud auth login
-   gcloud config set project groovy-ego-439416-u5
+   gcloud config set project tomy-hui-web
    ```
 
 6. **Deploy to Google Cloud Run**  
    Run the deployment command:
    ```bash
-   gcloud run deploy tomyhui-service
+   gcloud run deploy tomy-hui-frontend-web
    ```
    - **Region**: `asia-southeast1`
    - **Docker**: Select "Y"
