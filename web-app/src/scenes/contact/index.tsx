@@ -39,7 +39,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="w-1/2 md:mt-40 md:text-5xl text-2xl mt-10 font-extrabold text-white">
+              <p className="w-1/2 md:mt-40 mt-10 md:text-5xl text-2xl font-extrabold text-white">
                 Contact
               </p>
               <p className="mt-5 w-full md:text-xl text-lg text-white ">

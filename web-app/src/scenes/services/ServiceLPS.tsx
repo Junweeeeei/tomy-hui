@@ -62,17 +62,17 @@ const ServiceLPS = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-3/4 text-5xl font-extrabold text-white ">
+              <p className="w-1/2 md:mt-40 mt-10 md:text-5xl text-2xl font-extrabold text-white">
                 Lightning Protection System
               </p>
-              <p className="mt-5 w-3/4 text-xl text-white ">
+              <p className="mt-5 w-3/4 md:text-xl text-sm text-white">
                 Installation of lightning protection systems to safeguard livehood
               </p>
             </motion.div>
           </div>
         </motion.div>
       </div>
-      <div className="py-10 md:h-5/7 items-center justify-center bg-gray-20">
+      <div className="md:py-10 md:h-5/7 items-center justify-center bg-gray-20">
         <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
@@ -91,8 +91,8 @@ const ServiceLPS = ({ setSelectedPage }: Props) => {
             <div className='justify-content mx-auto w-full gap-16 md:flex'>
               <div className='mt-16 basis-1/2 md:mt-0'>
                 <div className='my-5'>
-                  <p className='font-bold text-5xl'>Lightning Protection System</p>
-                  <p className="my-5">
+                  <p className='font-bold md:text-5xl text-2xl'>Lightning Protection System</p>
+                  <p className="my-5 md:text-xl text-sm">
                     {service_des}
                   </p>
                   {/* Interactive Button For Email */}
@@ -133,7 +133,7 @@ const ServiceLPS = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className='font-bold text-5xl text-center'> Project References</p>
+            <p className='font-bold md:text-5xl text-2xl text-center'> Project References</p>
           </motion.div>
           {/* PROJECTS */}
           <motion.div
