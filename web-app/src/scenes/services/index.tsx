@@ -89,10 +89,10 @@ const Services = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
+              <p className="w-1/2 md:mt-40 md:text-5xl text-2xl mt-10 font-extrabold text-white">
                 Services
               </p>
-              <p className="mt-5 w-full text-xl text-white ">
+              <p className="mt-5 w-full md:text-xl text-lg text-white ">
                 Solutions for All Your Electrical Needs
               </p>
             </motion.div>
@@ -115,8 +115,8 @@ const Services = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p>Our Core Services.</p>
-            <p className="my-5 text-3xl">
+            <p className="md:text-xl text-sm">Our Core Services.</p>
+            <p className="my-5 md:text-3xl text-lg">
             These are our core services, but our expertise extends beyond what's listed here. If you're unsure whether your needs fall within our scope, don't hesitate to reach out – we're here to assist!
             </p>
           </motion.div>
@@ -156,7 +156,7 @@ const Services = ({ setSelectedPage }: Props) => {
                       visible: { opacity: 1, x: 0 },
                     }}
                   >
-                    <p className="font-semibold text-3xl">
+                    <p className="font-semibold md:text-3xl text-xl">
                       YOUR TRUSTED CHOICE FOR{" "}
                       <span className="text-red-700">ELECTRICAL SERVICES</span>
                     </p>
@@ -175,7 +175,7 @@ const Services = ({ setSelectedPage }: Props) => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                <p className="my-5 text-xl">
+                <p className="my-5 md:text-xl text-sm">
                   Join our community of satisfied clients who trust us for reliable, high-quality electrical services tailored to meet your needs!
                 </p>
               </motion.div>
@@ -197,7 +197,7 @@ const Services = ({ setSelectedPage }: Props) => {
               <div className="mt-16 flex">
                 <div>
                   <motion.div
-                      className="flex col text-5xl justify-center "
+                      className="flex col md:text-5xl text-2xl justify-center "
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.5 }}
@@ -206,7 +206,7 @@ const Services = ({ setSelectedPage }: Props) => {
                       Client Testimonials
                     </motion.div>
                     <motion.div
-                      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-8 py-10 px-10"
+                      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center gap-8 md:py-10 md:px-10 md:text-xl text-sm py-4 px-4"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.5 }}

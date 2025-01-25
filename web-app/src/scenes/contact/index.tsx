@@ -39,10 +39,10 @@ const Contact = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
+              <p className="w-1/2 md:mt-40 md:text-5xl text-2xl mt-10 font-extrabold text-white">
                 Contact
               </p>
-              <p className="mt-5 w-full text-xl text-white ">
+              <p className="mt-5 w-full md:text-xl text-lg text-white ">
                 Contact Our Team Of Experts For Engineering Solutions
               </p>
             </motion.div>
@@ -65,17 +65,17 @@ const Contact = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className='font-bold text-5xl'>Contact Details</p>
-            <p className="my-5">
+            <p className='font-bold md:text-5xl text-3xl'>Contact Details</p>
+            <p className="my-5 md:text-lg text-sm">
               {contact_des}
             </p>
-            <div className='my-5 flex gap-20'>
+            <div className='my-5 flex md:flex-row md:gap-20 flex-col gap-10'>
               <div>
                 <p className='text-xl font-bold'>
                 Office Address:
                 </p>
-                <div>
-                  <p className='mt-5 text-xl font-bold font-sahitya'>
+                <div className='md:text-xl text-sm'>
+                  <p className='mt-5 md:text-xl text-sm font-bold font-sahitya'>
                     Tomy Hui Electrical Engineering Pte. Ltd.
                   </p>
                   <p>7 Toh Guan Road East #03-03</p>
@@ -83,18 +83,18 @@ const Contact = ({ setSelectedPage }: Props) => {
                   <p>Singapore 608599</p>
                 </div>
                 <div className='mt-5 flex'>
-                  <span className="text-lg font-bold">Telephone:</span>
-                  <a href="tel:+62611117" className="text-lg text-blue-500 hover:underline ml-1">
+                  <span className="md:text-lg text-sm font-bold">Telephone:</span>
+                  <a href="tel:+62611117" className="md:text-lg text-sm text-blue-500 hover:underline ml-1">
                     6261 1117
                   </a>
                 </div>
                 <div>
-                  <span className="text-lg font-bold">Project Enquiries: </span>
-                  <EmailLink className='text-blue-500 text-lg'> tomyhui_elect@yahoo.com.sg </EmailLink>
+                  <span className="md:text-lg text-sm font-bold">Project Enquiries: </span>
+                  <EmailLink className='md:text-lg text-sm text-blue-500'> tomyhui_elect@yahoo.com.sg </EmailLink>
                 </div>
               </div>
-              <div>
-                <p className='text-xl font-bold'>
+              <div className='md:text-xl text-sm'>
+                <p className='md:text-xl text-lg font-bold'>
                   Office Operating Hours:
                 </p>
                 <p className='mt-5'>
@@ -124,8 +124,8 @@ const Contact = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className='font-bold text-5xl'> Our Location</p>
-            <div className='my-5'>
+            <p className='font-bold md:text-5xl text-3xl'> Our Location</p>
+            <div className='my-5 md:h-96 md:pr-40'>
               <GoogleMapComponent />
             </div>
           </motion.div>

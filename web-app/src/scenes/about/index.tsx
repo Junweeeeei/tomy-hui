@@ -15,7 +15,7 @@ const company_des_5 = `Guided by a client-first mindset, we strive to exceed exp
 const About = ({ setSelectedPage }: Props) => {
   return (
     <section id="about" className="md:h-full">
-      <div className="relative bg-home-background bg-cover md:min-h-400px min-h-[400px] md:min flex items-center justify-center"> {/* Background image container */}
+      <div className="relative bg-home-background bg-cover md:min-h-[400px] min-h-[400px] md:min flex items-center justify-center"> {/* Background image container */}
         {/* Gradient Overlay (applies only to this container) */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
         <motion.div
@@ -25,7 +25,7 @@ const About = ({ setSelectedPage }: Props) => {
           <div className="z-10 md:basis-full">
             {/* HEADINGS */}
             <motion.div
-              className="md:-mt-20"
+              className=""
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -35,10 +35,10 @@ const About = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="mt-40 w-1/2 text-5xl font-extrabold text-white ">
+              <p className="w-1/2 md:mt-40 md:text-5xl text-2xl mt-10 font-extrabold text-white">
                 About Us
               </p>
-              <p className="mt-5 w-full text-xl text-white ">
+              <p className="mt-5 w-full md:text-xl text-lg text-white ">
                 Over 25 Years of Expertise in Electrical Engineering
               </p>
             </motion.div>
@@ -61,20 +61,20 @@ const About = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className='font-bold text-5xl'>Company Profile</p>
-            <p className="my-5">
+            <p className='font-bold md:text-5xl text-2xl'>Company Profile</p>
+            <p className="my-5 md:text-xl text-sm">
               {company_des_1}
             </p>
-            <p className="my-5">
+            <p className="my-5 md:text-xl text-sm">
               {company_des_2}
             </p>
-            <p className="my-5">
+            <p className="my-5 md:text-xl text-sm">
               {company_des_3}
             </p>
-            <p className="my-5">
+            <p className="my-5 md:text-xl text-sm">
               {company_des_4}
             </p>
-            <p className="my-5">
+            <p className="my-5 md:text-xl text-sm">
               {company_des_5}
             </p>
           </motion.div>
@@ -95,7 +95,7 @@ const About = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className='font-bold text-5xl text-center'> Our Certifications</p>
+            <p className='font-bold text-center md:text-5xl text-2xl'> Our Certifications</p>
             <div className="flex items-center justify-center">
               <img src={CerticateImage} className='my-5'/>
             </div>
