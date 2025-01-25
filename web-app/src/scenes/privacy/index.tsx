@@ -5,6 +5,9 @@ import { SelectedPage }  from "@/shared/types";
 // import { ProjectType, SelectedPage }  from "@/shared/types";
 import EmailLink from "@/shared/EmailLink";
 
+const PrivacyLI: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <li className="md:text-base text-sm">{children}</li>
+);
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -48,7 +51,7 @@ const Privacy = ({ setSelectedPage }: Props) => {
     <section id="privacy" className="mx-auto min-h-full w-full">
       <div className="relative bg-white bg-cover mt-32"> {/* Background image container */}
       </div>
-      <div className="py-10 md:h-5/7 items-center justify-center mb-32">
+      <div className="md:py-10 md:h-5/7 items-center justify-center mb-32">
         <motion.div className="mx-auto w-1/2"
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
@@ -56,55 +59,55 @@ const Privacy = ({ setSelectedPage }: Props) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className='font-bold text-5xl text-left'> Privacy Notice</p>
-            <p className='my-5'>{privacy_header}</p>
-            <p className='my-5 font-bold text-2xl'>1. {q1}</p>
-            <ul className='mb-5 text-xl font-semibold'>{a1_1}</ul>
-            <li>{a1_2}</li>
-            <li>{a1_3}</li>
-            <p className='my-5 font-bold text-2xl'>2. {q2}</p>
-            <ul className='mb-5 text-xl font-semibold'>{a2_1}</ul>
-            <li>{a2_2}</li>
-            <li>{a2_3}</li>
-            <li>{a2_4}</li>
-            <li>{a2_5}</li>
-            <li>{a2_6}</li>
-            <p className='my-5 font-bold text-2xl'>3. {q3}</p>
-            <li>{a3_1}</li>
-            <p className='my-5 font-bold text-2xl'>4. {q4}</p>
-            <ul className='mb-5 text-xl font-semibold'>{a4_1}</ul>
-            <li>{a4_2}</li>
-            <li>{a4_3}</li>
-            <li>{a4_4}</li>
-            <p className='my-5 font-bold text-2xl'>5. {q5}</p>
-            <ul className='mb-5 text-xl font-semibold'>{a5_1}</ul>
-            <li>{a5_2}</li>
+            <p className='font-bold md:text-5xl text-2xl text-left'> Privacy Notice</p>
+            <p className='my-5 md:text-base text-sm'>{privacy_header}</p>
+            <p className='my-5 font-bold md:text-2xl text-lg'>1. {q1}</p>
+            <ul className='mb-5 font-semibold md:text-xl text-sm'>{a1_1}</ul>
+            <PrivacyLI>{a1_2}</PrivacyLI>
+            <PrivacyLI>{a1_3}</PrivacyLI>
+            <p className='my-5 font-bold md:text-2xl text-lg'>2. {q2}</p>
+            <ul className='mb-5 font-semibold md:text-xl text-sm'>{a2_1}</ul>
+            <PrivacyLI>{a2_2}</PrivacyLI>
+            <PrivacyLI>{a2_3}</PrivacyLI>
+            <PrivacyLI>{a2_4}</PrivacyLI>
+            <PrivacyLI>{a2_5}</PrivacyLI>
+            <PrivacyLI>{a2_6}</PrivacyLI>
+            <p className='my-5 font-bold md:text-2xl text-lg'>3. {q3}</p>
+            <PrivacyLI>{a3_1}</PrivacyLI>
+            <p className='my-5 font-bold md:text-2xl text-lg'>4. {q4}</p>
+            <ul className='mb-5 font-semibold md:text-xl text-sm'>{a4_1}</ul>
+            <PrivacyLI>{a4_2}</PrivacyLI>
+            <PrivacyLI>{a4_3}</PrivacyLI>
+            <PrivacyLI>{a4_4}</PrivacyLI>
+            <p className='my-5 font-bold md:text-2xl text-lg'>5. {q5}</p>
+            <ul className='mb-5 font-semibold md:text-xl text-sm'>{a5_1}</ul>
+            <PrivacyLI>{a5_2}</PrivacyLI>
             <div className='mt-5 flex'>
-                <span className="text-lg font-bold">Telephone:</span>
-                <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
+                <span className="md:text-lg text-sm font-bold">Telephone:</span>
+                <a href="tel:+62663369" className="md:text-lg text-sm text-blue-500 hover:underline ml-1">
                 6261 1117
                 </a>
             </div>
             <div>
-                <span className="text-lg font-bold">Fax:</span>
-                <a href="tel:+62663369" className="text-lg text-blue-500 hover:underline ml-1">
+                <span className="md:text-lg text-sm font-bold">Fax:</span>
+                <a href="tel:+62663369" className="md:text-lg text-sm text-blue-500 hover:underline ml-1">
                 6268 9727
                 </a>
             </div>
             <div>
-                <span className="text-lg font-bold">Administrative Matters: </span>
-                <EmailLink className='text-blue-500 text-lg'> tomyhui_finance@yahoo.com.sg </EmailLink>
+                <span className="md:text-lg text-sm font-bold">Administrative Matters: </span>
+                <EmailLink className='text-blue-500 md:text-lg text-sm'> tomyhui_finance@yahoo.com.sg </EmailLink>
             </div>
             <div>
-                <span className="text-lg font-bold">Project Inquiries: </span>
-                <EmailLink className='text-blue-500 text-lg'> tomyhui_finance@yahoo.com.sg </EmailLink>
+                <span className="md:text-lg text-sm font-bold">Project Inquiries: </span>
+                <EmailLink className='text-blue-500 md:text-lg text-sm'> tomyhui_finance@yahoo.com.sg </EmailLink>
             </div>
           </motion.div>
         </motion.div>
