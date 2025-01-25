@@ -25,7 +25,7 @@ const About = ({ setSelectedPage }: Props) => {
           <div className="z-10 md:basis-full">
             {/* HEADINGS */}
             <motion.div
-              className=""
+              className="md:-mt-20"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
